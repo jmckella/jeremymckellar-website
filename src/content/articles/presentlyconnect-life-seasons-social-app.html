@@ -1,0 +1,199 @@
+<p>What if staying connected with friends didn't require constant posting, endless scrolling, or the anxiety of maintaining an online presence?</p>
+      <p>That question led me to build <a href="https://presentlyconnect.netlify.app/" target="_blank" rel="noopener"><strong>PresentlyConnect</strong></a> &mdash; a social app that replaces the pressure of daily updates with simple "life seasons." Instead of posting photos or status updates every day, you share your current season: Are you thriving? Grinding through a busy project? Traveling? Struggling and need space?</p>
+      <p>This is the story of how I built a fully functional prototype in under 2 hours using AI-assisted development, and what I learned about rapid product validation.</p>
+
+      <div style="aspect-ratio:16/9;border-radius:16px;border:1px solid rgba(245,242,234,0.12);background:repeating-linear-gradient(45deg,rgba(245,242,234,0.045) 0 12px,rgba(245,242,234,0) 12px 24px),#12204A;display:flex;align-items:center;justify-content:center;margin:8px 0 34px;">
+        <p style="margin:0;padding:24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.7;color:#8A93A8;">[ IMAGE PLACEHOLDER ]<br>App screenshot &mdash; home screen</p>
+      </div>
+
+      <h3>The Problem: Social Media Fatigue is Real</h3>
+      <p>I've watched close friendships fade not because people stopped caring, but because maintaining connections through social media became exhausting.</p>
+      <p><strong>The current state of digital friendship:</strong></p>
+      <ul>
+        <li>Guilt over not posting regularly</li>
+        <li>Anxiety about engaging "enough" with friends' content</li>
+        <li>Superficial interactions replacing meaningful check-ins</li>
+        <li>Constant comparison and FOMO</li>
+        <li>Forgotten birthdays and life milestones</li>
+        <li>Long-distance friendships going dormant</li>
+      </ul>
+      <p>A 2023 Pew Research study found that 73% of adults aged 25&ndash;40 feel guilty about not keeping in touch with friends, yet 68% say traditional social media makes them feel more stressed, not more connected.</p>
+      <p><strong>The core insight:</strong> People don't need another platform to perform on. They need permission to be honest about where they are in life.</p>
+
+      <h3>The Solution: Life Seasons Framework</h3>
+      <p>PresentlyConnect introduces a fundamentally different approach to social connection: <strong>life seasons</strong>.</p>
+      <p><strong>Instead of asking:</strong> "What are you doing right now?"<br><strong>We ask:</strong> "What season of life are you in?"</p>
+      <p><strong>The 8 Life Seasons</strong></p>
+      <ol>
+        <li><strong>🌟 Thriving</strong> &mdash; Life is great, open to plans, feeling good</li>
+        <li><strong>😊 Available</strong> &mdash; In a good rhythm, open to catch up</li>
+        <li><strong>🏃 Busy</strong> &mdash; Limited time, understanding appreciated</li>
+        <li><strong>💪 Grinding</strong> &mdash; Focused on a goal, minimal socializing</li>
+        <li><strong>😔 Struggling</strong> &mdash; Need support, low energy</li>
+        <li><strong>🎉 Celebrating</strong> &mdash; Major life event, extra social</li>
+        <li><strong>✈️ Traveling</strong> &mdash; Away, limited availability</li>
+        <li><strong>🏡 Nesting</strong> &mdash; Cozy mode, prefer low-key hangouts</li>
+      </ol>
+      <p>This framework does three things traditional social media can't:</p>
+      <ol>
+        <li><strong>Removes performance pressure</strong> &mdash; Update when your life actually changes, not daily</li>
+        <li><strong>Sets realistic expectations</strong> &mdash; Friends know when you're unavailable without explanation</li>
+        <li><strong>Enables authentic support</strong> &mdash; Seeing a friend is "struggling" prompts real check-ins, not performative likes</li>
+      </ol>
+
+      <div style="aspect-ratio:16/9;border-radius:16px;border:1px solid rgba(245,242,234,0.12);background:repeating-linear-gradient(45deg,rgba(245,242,234,0.045) 0 12px,rgba(245,242,234,0) 12px 24px),#12204A;display:flex;align-items:center;justify-content:center;margin:8px 0 34px;">
+        <p style="margin:0;padding:24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.7;color:#8A93A8;">[ IMAGE PLACEHOLDER ]<br>Presently Connect3.png &mdash; life seasons UI</p>
+      </div>
+
+      <h3>Product Design Philosophy</h3>
+      <p>Building PresentlyConnect required rethinking social apps from first principles.</p>
+      <p><strong>What We Removed</strong></p>
+      <ul>
+        <li><strong>No likes or reactions</strong> &mdash; No performance metrics</li>
+        <li><strong>No comments</strong> &mdash; No pressure to engage publicly</li>
+        <li><strong>No endless feed</strong> &mdash; Simple chronological list</li>
+        <li><strong>No algorithms</strong> &mdash; User-controlled experience</li>
+        <li><strong>No ads</strong> &mdash; Not the goal (yet)</li>
+      </ul>
+      <p><strong>What We Kept</strong></p>
+      <ul>
+        <li><strong>Privacy</strong> &mdash; Friend-only visibility</li>
+        <li><strong>Simplicity</strong> &mdash; Three screens maximum</li>
+        <li><strong>Authenticity</strong> &mdash; Real status updates, not curated highlights</li>
+        <li><strong>Intentionality</strong> &mdash; Check in when it matters, not compulsively</li>
+      </ul>
+      <p><strong>Design Principles</strong></p>
+      <ol>
+        <li><strong>Calm technology</strong> &mdash; No red notification badges, no FOMO design</li>
+        <li><strong>Human-centered</strong> &mdash; Technology that enhances life, doesn't overwhelm it</li>
+        <li><strong>Mobile-first</strong> &mdash; Quick check-ins on the go</li>
+        <li><strong>Accessible</strong> &mdash; Clear, readable, intuitive</li>
+      </ol>
+
+      <h3>The Build: AI-Assisted Rapid Prototyping</h3>
+      <p>I built PresentlyConnect using <strong>Bolt.new</strong>, an AI-powered development tool that turns natural language descriptions into working React applications.</p>
+      <p><strong>Hour 1: Concept to Code</strong></p>
+      <ul>
+        <li>Wrote comprehensive PRD with context-engineered prompts</li>
+        <li>Defined 8 life seasons with colors and descriptions</li>
+        <li>Created demo data (10 sample friends)</li>
+        <li>Specified exact design system (colors, typography, spacing)</li>
+      </ul>
+      <p><strong>Hour 2: Build and Iterate</strong></p>
+      <ul>
+        <li>Bolt.new generated React + TypeScript + TailwindCSS foundation</li>
+        <li>Iterated on UI polish (blue gradient, avatar circles, card styling)</li>
+        <li>Added localStorage for status persistence</li>
+        <li>Built status edit modal with all 8 options</li>
+        <li>Added welcome screen explaining the concept</li>
+      </ul>
+      <p><strong>The result:</strong> A fully functional prototype with a beautiful, modern UI, working status editing, 10 pre-populated demo friends, mobile-responsive design, persistent user status, and production-ready polish.</p>
+
+      <div style="aspect-ratio:16/9;border-radius:16px;border:1px solid rgba(245,242,234,0.12);background:repeating-linear-gradient(45deg,rgba(245,242,234,0.045) 0 12px,rgba(245,242,234,0) 12px 24px),#12204A;display:flex;align-items:center;justify-content:center;margin:8px 0 34px;">
+        <p style="margin:0;padding:24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.7;color:#8A93A8;">[ IMAGE PLACEHOLDER ]<br>Presently Connect4.png &mdash; prototype result</p>
+      </div>
+
+      <p><strong>Key to Success: Context Engineering</strong></p>
+      <p>Following Anthropic's guide on effective prompting for AI agents, I structured my Bolt.new prompt with:</p>
+      <ol>
+        <li><strong>Clear constraints</strong> &mdash; "This is a demo, no backend, localStorage only"</li>
+        <li><strong>Explicit requirements</strong> &mdash; Exact color codes, component structure</li>
+        <li><strong>Code examples</strong> &mdash; Pre-written TypeScript interfaces and utilities</li>
+        <li><strong>Step-by-step instructions</strong> &mdash; Build order for components</li>
+        <li><strong>Quality checklist</strong> &mdash; Acceptance criteria for completion</li>
+      </ol>
+      <p>This context engineering reduced iteration loops and got me 90% of the way there on the first generation.</p>
+
+      <h3>Technical Implementation</h3>
+      <p><strong>Tech Stack:</strong></p>
+      <ul>
+        <li>React 18 with TypeScript</li>
+        <li>TailwindCSS for styling</li>
+        <li>Lucide React for icons</li>
+        <li>localStorage for data persistence</li>
+        <li>Netlify for deployment</li>
+      </ul>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Status card components with colored borders</li>
+        <li>Edit modal with 8 status selections</li>
+        <li>Character counter for status notes (100 max)</li>
+        <li>Relative timestamps ("2 days ago")</li>
+        <li>Avatar circles with initials</li>
+        <li>Responsive mobile design</li>
+      </ul>
+      <p>Simple, intentional, focused.</p>
+
+      <h3>What I Learned</h3>
+      <p><strong>1. Simplicity is the Ultimate Sophistication</strong></p>
+      <p>My first version had friend groups, events, voice notes, wellness resources &mdash; basically rebuilding Facebook.</p>
+      <p>Stripping it down to just "life seasons" made the concept 10x clearer. If you can't explain your product in one sentence, it's too complex.</p>
+      <p><strong>2. Prototypes Validate Concepts, Not Features</strong></p>
+      <p>I don't need real user accounts to test if people like the "life seasons" framework. I need them to interact with the concept.</p>
+      <p>A demo with 10 fake friends achieves 90% of the validation at 10% of the development time.</p>
+      <p><strong>3. AI Tools Accelerate Product Thinking</strong></p>
+      <p>Bolt.new didn't just code faster &mdash; it forced me to think clearly. Writing context-engineered prompts is essentially writing a perfect spec. The clarity required to instruct AI improved my product thinking.</p>
+      <p><strong>4. Portfolio Projects Should Tell Stories</strong></p>
+      <p>This isn't just "I built a React app." It's "I identified a problem with social media, designed a novel solution, and validated it with a working prototype in 2 hours."</p>
+      <p>That narrative demonstrates product sense, technical execution, and rapid iteration &mdash; much more valuable than a polished but generic app.</p>
+
+      <h3>Future Iterations (If Validated)</h3>
+      <p><strong>Phase 2 (If 7+ out of 10 people say "I'd use this"):</strong></p>
+      <ul>
+        <li>Supabase backend integration</li>
+        <li>Real user authentication</li>
+        <li>Friend invite system</li>
+        <li>Push notifications for status changes</li>
+        <li>Status history timeline</li>
+      </ul>
+      <p><strong>Phase 3 (Monetization):</strong></p>
+      <ul>
+        <li>Freemium model: Free up to 20 friends</li>
+        <li>Premium ($4.99/mo): Unlimited friends, calendar integration, analytics</li>
+        <li>Enterprise ($49/mo): Team status boards for remote companies</li>
+      </ul>
+      <p><strong>B2B Opportunity:</strong> Remote teams using PresentlyConnect to communicate capacity:</p>
+      <ul>
+        <li>"Sarah is grinding on a launch &mdash; don't schedule meetings"</li>
+        <li>"The design team is available this week for collaboration"</li>
+        <li>"Jake is struggling &mdash; check in before asking for deliverables"</li>
+      </ul>
+      <p>This is where the real business potential lies &mdash; replacing Slack status with life seasons for distributed teams.</p>
+
+      <h3>Portfolio Value</h3>
+      <p><strong>What This Project Demonstrates:</strong></p>
+      <ol>
+        <li><strong>Product Thinking</strong> &mdash; Identified a real problem, designed a unique solution</li>
+        <li><strong>Rapid Prototyping</strong> &mdash; Concept to working demo in hours, not weeks</li>
+        <li><strong>AI-Assisted Development</strong> &mdash; Leveraged modern tools effectively</li>
+        <li><strong>User-Centered Design</strong> &mdash; Focused on solving actual pain points</li>
+        <li><strong>Technical Execution</strong> &mdash; Clean React code, thoughtful UX, polished UI</li>
+        <li><strong>Strategic Simplification</strong> &mdash; Resisted feature creep, shipped MVP</li>
+      </ol>
+      <p>For someone hiring a product-minded developer or a technical product manager, this case study shows I can identify market gaps, design innovative solutions, build functional prototypes fast, think strategically about features vs. scope, and ship rather than over-engineer.</p>
+
+      <h3>Try It Yourself</h3>
+      <p><strong>Live Demo:</strong> <a href="https://presentlyconnect.netlify.app/" target="_blank" rel="noopener">View Here</a></p>
+      <p>The demo includes 10 sample friends with different life seasons, an editable status for "You" (persists via localStorage), full mobile responsive design, and a welcome screen explaining the concept.</p>
+      <p><strong>Feedback Welcome:</strong><br>If you try it, I'd love to know: Would you actually use this if it was a real app? Why or why not?</p>
+
+      <h3>The Big Question</h3>
+      <p><strong>Is this the future of social connection?</strong> Maybe. Maybe not.</p>
+      <p>But it's definitely a better question than "How do we get more engagement on our posts?"</p>
+      <p>The real innovation isn't the features. It's the framework. Life seasons acknowledge what everyone knows but social media ignores: <strong>People's capacity for connection fluctuates.</strong></p>
+      <p>You don't owe anyone constant availability. You don't owe anyone performative happiness. You just owe your friends honesty about where you are.</p>
+      <p>That's what PresentlyConnect is about. That's what I built in 2 hours.</p>
+      <p>And that's what I hope changes how we think about staying connected in a digital world.</p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>✅ <strong>Build to validate, not to perfect</strong> &mdash; A working prototype beats a perfect plan</li>
+        <li>✅ <strong>Simplicity scales</strong> &mdash; One clear concept is better than ten good features</li>
+        <li>✅ <strong>AI accelerates iteration</strong> &mdash; Context engineering = better product specs</li>
+        <li>✅ <strong>Portfolio projects tell stories</strong> &mdash; Show process, not just output</li>
+        <li>✅ <strong>Ship, then iterate</strong> &mdash; Real feedback beats theoretical planning</li>
+      </ul>
+
+      <h2>About the Author</h2>
+      <p>Jeremy McKellar builds technology that makes the digital world more meaningful and accessible. PresentlyConnect is part of a portfolio of apps focused on solving real problems through thoughtful design and rapid execution.</p>
+      <p><a href="/">View Portfolio</a> | <a href="https://www.linkedin.com/in/jeremy-mckellar/" target="_blank" rel="noopener">LinkedIn</a></p>

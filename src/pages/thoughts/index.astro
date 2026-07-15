@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import posts from '../../data/posts.json';
+---
+<BaseLayout
+  title="Thoughts — Jeremy McKellar"
+  description="Quick, actionable reads on AI, creativity, and the future of work — without the hype."
+>
+<div style="background:var(--canvas);min-height:100vh;">
+
+  <header class="site-nav">
+    <nav aria-label="Main">
+      <a href="/" aria-label="Jeremy McKellar — home" class="wordmark">JM<span>.</span></a>
+      <div style="display:flex;align-items:center;gap:28px;">
+        <a href="/#experiments" style="font-size:15px;font-weight:500;">Experiments</a>
+        <a href="mailto:info@jeremymckellar.com" class="btn-gold">Work with me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(20px,5vw,72px) 80px;position:relative;">
+    <img class="index-art" src="/assets/caricature-ipad.png" alt="" aria-hidden="true" style="position:absolute;right:clamp(24px,6vw,80px);top:clamp(56px,8vw,96px);width:clamp(190px,17vw,270px);height:auto;filter:drop-shadow(0 24px 48px rgba(0,0,0,0.4));" />
+    <p class="eyebrow" style="margin:0 0 24px;">THE BLOG</p>
+    <h1 style="margin:0 0 20px;font-family:var(--display);font-weight:600;font-size:clamp(52px,10vw,132px);letter-spacing:-0.03em;line-height:1;">Thoughts</h1>
+    <p style="margin:0 0 40px;font-size:19px;line-height:1.65;color:var(--slate);max-width:560px;">Quick, actionable reads on AI, creativity, and the future of work &mdash; without the hype.</p>
+
+    <div style="max-width:560px;">
+      <form data-subscribe class="subscribe-form" style="margin-bottom:16px;">
+        <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address" style="padding:14px 20px;" />
+        <button type="submit" class="btn-gold lg" style="font-size:16px;padding:14px 28px;">Subscribe</button>
+      </form>
+      <p class="subscribe-confirm" style="margin:0 0 12px;">Thanks &mdash; you&rsquo;re on the list. (Form goes live with MailerLite.)</p>
+    </div>
+    <p class="mono-caption" style="margin:0 0 64px;">Fresh perspectives on tech trends, innovation, and the future of our digital world.</p>
+
+    <div style="display:flex;flex-direction:column;">
+      {posts.map((post) => (
+        <a class="post-row" href={`/thoughts/${post.slug}/`}>
+          <span style="font-family:var(--mono);font-size:13px;letter-spacing:0.1em;color:#E8B44C;">{post.date}</span>
+          <span style="display:flex;flex-direction:column;gap:8px;">
+            <span class="post-title" style="font-family:var(--display);font-weight:600;font-size:clamp(22px,2.6vw,30px);letter-spacing:-0.015em;line-height:1.15;color:inherit;">{post.title}</span>
+            <span style="font-size:16px;line-height:1.6;color:#8A93A8;">{post.excerpt}</span>
+          </span>
+          <span aria-hidden="true" style="font-size:22px;color:#93A5FF;justify-self:end;">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Jeremy McKellar · Charlotte, NC</span>
+    <div style="display:flex;gap:28px;">
+      <a href="mailto:info@jeremymckellar.com">Email</a>
+      <a href="https://www.linkedin.com/in/jeremy-mckellar/" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+      <a href="/">Home &rarr;</a>
+    </div>
+  </footer>
+</div>
+</BaseLayout>

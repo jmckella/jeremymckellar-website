@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import posts from '../data/posts.json';
+
+const latest = posts.slice(0, 3);
+---
+<BaseLayout
+  title="Jeremy McKellar — Technologist & Storyteller"
+  description="Stay curious. Stay connected. Jeremy McKellar makes tech meaningful and accessible through creative projects, content, and collaborations. Charlotte, NC."
+>
+<div id="top" style="background:var(--canvas);min-height:100vh;overflow-x:hidden;position:relative;">
+
+  <!-- NAV -->
+  <header class="site-nav">
+    <nav aria-label="Main">
+      <a href="#top" aria-label="Jeremy McKellar — home" class="wordmark">JM<span>.</span></a>
+      <div class="nav-links" style="display:flex;align-items:center;gap:36px;font-size:15px;font-weight:500;">
+        <a href="#experiments">Experiments</a>
+        <a href="#thoughts">Thoughts</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#about">About</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a data-magnetic href="mailto:info@jeremymckellar.com" class="btn-gold">Work with me</a>
+        <button data-nav-burger aria-label="Open menu" class="nav-burger" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:1px solid rgba(245,242,234,0.25);border-radius:999px;color:#F5F2EA;cursor:pointer;font-family:var(--mono);font-size:13px;">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div data-mobile-menu style="display:none;position:fixed;inset:0;z-index:80;background:var(--canvas);flex-direction:column;padding:24px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="wordmark">JM<span>.</span></span>
+      <button data-menu-close aria-label="Close menu" style="width:44px;height:44px;background:transparent;border:1px solid rgba(245,242,234,0.25);border-radius:999px;color:#F5F2EA;cursor:pointer;font-size:16px;">✕</button>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:64px;">
+      <a href="#experiments" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Experiments</a>
+      <a href="#thoughts" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Thoughts</a>
+      <a href="#podcast" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Podcast</a>
+      <a href="#about" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">About</a>
+    </div>
+    <a href="mailto:info@jeremymckellar.com" style="margin-top:auto;display:block;text-align:center;background:#E8B44C;color:#0A0F1E;font-weight:600;font-size:17px;padding:16px 24px;border-radius:999px;">Work with me</a>
+  </div>
+
+  <!-- HERO -->
+  <section style="position:relative;padding:clamp(72px,12vh,140px) clamp(20px,5vw,72px) 96px;">
+    <canvas data-particles aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 45% at 72% 15%, rgba(59,91,255,0.3), rgba(59,91,255,0) 70%);"></div>
+    <img class="hero-art" src="/assets/caricature-hero.png" alt="Illustrated caricature of Jeremy McKellar presenting with a tablet" style="position:absolute;right:clamp(24px,6vw,96px);bottom:0;width:clamp(260px,25vw,430px);filter:drop-shadow(0 30px 60px rgba(0,0,0,0.45));" />
+    <div style="position:relative;max-width:1400px;">
+      <p class="eyebrow" style="margin:0 0 28px;color:var(--slate);">JEREMY McKELLAR — TECHNOLOGIST &amp; STORYTELLER · CHARLOTTE, NC</p>
+      <h1 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(42px,10.5vw,160px);line-height:1.08;letter-spacing:-0.03em;">
+        Stay <span style="display:inline-block;overflow:hidden;height:1.1em;line-height:1.1;vertical-align:-0.26em;"><span data-roll style="display:flex;flex-direction:column;transform:translateY(0em);transition:transform 0.7s cubic-bezier(0.76,0,0.24,1);"><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">curious</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">building</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">learning</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">connected</em>.</span></span></span><br />
+        Stay connected.
+      </h1>
+      <p style="margin:40px 0 0;max-width:620px;font-size:19px;line-height:1.7;color:var(--prose);">I&rsquo;ve spent over a decade working with technology &mdash; but really, it&rsquo;s been a lifetime learning how it connects people. My mission is to make tech meaningful and accessible through creative projects, content, and collaborations.</p>
+      <div style="max-width:620px;">
+        <form data-subscribe class="subscribe-form" style="margin-top:36px;">
+          <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address" />
+          <button data-magnetic type="submit" class="btn-gold lg">Subscribe</button>
+        </form>
+        <p class="subscribe-confirm">Thanks &mdash; you&rsquo;re on the list. (Form goes live with MailerLite.)</p>
+        <p class="mono-caption" style="margin:16px 0 0;">Join hundreds of readers exploring how to thrive in the digital world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS TICKER -->
+  <div style="border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:rgba(59,91,255,0.06);padding:18px clamp(20px,5vw,72px);display:flex;align-items:baseline;gap:16px;font-family:var(--mono);font-size:14px;letter-spacing:0.1em;">
+    <span style="color:#E8B44C;flex-shrink:0;">&#9656; NOW BUILDING</span>
+    <span style="color:var(--prose);min-height:1.4em;"><span data-typed></span><span class="typed-cursor"></span></span>
+  </div>
+
+  <!-- EXPERIMENTS -->
+  <section id="experiments" style="padding:clamp(80px,12vw,140px) clamp(20px,5vw,72px) 0;max-width:1440px;margin:0 auto;">
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:16px 48px;margin-bottom:20px;">
+      <span class="eyebrow">01 / EXPERIMENTS</span>
+    </div>
+    <h2 data-reveal="1" style="margin:0 0 16px;font-family:var(--display);font-weight:600;font-size:clamp(40px,6vw,84px);letter-spacing:-0.025em;line-height:1.02;">Experiments &amp; builds</h2>
+    <p data-reveal="2" style="margin:0 0 56px;font-size:19px;line-height:1.6;color:var(--slate);max-width:560px;">Prototypes shared early &mdash; real tools, real trade-offs, real learnings.</p>
+
+    <div class="bento" style="display:grid;grid-template-columns:repeat(12,1fr);gap:20px;">
+      <article data-tilt data-reveal="1" class="card" style="grid-column:span 7;display:flex;flex-direction:column;gap:16px;padding:clamp(28px,3.5vw,48px);min-height:320px;">
+        <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#E8B44C;"><span style="color:#5BE87C;">●</span> LIVE / PRODUCTIVITY</p>
+        <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(28px,3vw,42px);letter-spacing:-0.02em;line-height:1.05;">Universal Document Formatter</h3>
+        <p style="margin:0;font-size:18px;line-height:1.65;color:var(--slate);max-width:520px;">Automatically reformats text for different social platforms &mdash; saving creators 5+ minutes per post. Built in two hours to stop wasting time.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:auto;padding-top:16px;font-weight:600;font-size:16px;">
+          <a href="https://document-formatter.netlify.app/" target="_blank" rel="noopener" style="color:#93A5FF;">Try it &nearr;</a>
+          <a href="/thoughts/i-built-a-document-formatter-in-2-hours-to-stop-wasting-time/" style="color:#F5F2EA;">Read the story &rarr;</a>
+        </div>
+      </article>
+
+      <article data-tilt data-reveal="2" class="card" style="grid-column:span 5;display:flex;flex-direction:column;gap:16px;padding:clamp(28px,3.5vw,48px);min-height:320px;">
+        <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#E8B44C;"><span style="color:#5BE87C;">●</span> LIVE / SOCIAL</p>
+        <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(28px,3vw,42px);letter-spacing:-0.02em;line-height:1.05;">PresentlyConnect</h3>
+        <p style="margin:0;font-size:18px;line-height:1.65;color:var(--slate);">A pressure-free social app for busy adults &mdash; authentic connection without the stress of keeping up.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:auto;padding-top:16px;font-weight:600;font-size:16px;">
+          <a href="https://presentlyconnect.netlify.app/" target="_blank" rel="noopener" style="color:#93A5FF;">Try it &nearr;</a>
+          <a href="/thoughts/presentlyconnect-life-seasons-social-app/" style="color:#F5F2EA;">Read the story &rarr;</a>
+        </div>
+      </article>
+
+      <article data-reveal="3" style="grid-column:span 12;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;background:transparent;border:1.5px dashed rgba(232,180,76,0.4);border-radius:24px;padding:clamp(28px,3.5vw,44px);">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:640px;">
+          <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:var(--slate);">◌ IN PROGRESS</p>
+          <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(24px,2.6vw,36px);letter-spacing:-0.02em;">What&rsquo;s next</h3>
+          <p style="margin:0;font-size:18px;line-height:1.65;color:var(--slate);">The next experiment is already on the bench. I build in public &mdash; follow along for the trade-offs, the dead ends, and the working demos.</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:clamp(20px,3vw,44px);flex-shrink:0;">
+          <img src="/assets/caricature-desk.png" alt="" aria-hidden="true" style="width:clamp(110px,13vw,170px);height:auto;" />
+          <a data-magnetic href="#top" class="btn-outline" style="flex-shrink:0;">Follow along &uarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- LATEST THOUGHTS -->
+  <section id="thoughts" style="padding:clamp(80px,12vw,140px) clamp(20px,5vw,72px) 0;max-width:1440px;margin:0 auto;">
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px;">
+      <span class="eyebrow">02 / WRITING</span>
+      <a href="/thoughts/" style="font-weight:600;font-size:16px;color:#93A5FF;">View all thoughts &rarr;</a>
+    </div>
+    <h2 data-reveal="1" style="margin:0 0 56px;font-family:var(--display);font-weight:600;font-size:clamp(40px,6vw,84px);letter-spacing:-0.025em;line-height:1.02;">Latest thoughts</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+      {latest.map((post, i) => (
+        <a data-tilt data-reveal={i + 1} href={`/thoughts/${post.slug}/`} class="card" style="display:flex;flex-direction:column;gap:14px;padding:32px;color:#F5F2EA;">
+          <span style="font-family:var(--mono);font-size:12px;letter-spacing:0.14em;color:#E8B44C;">{post.date}</span>
+          <span style="font-family:var(--display);font-weight:600;font-size:26px;letter-spacing:-0.015em;line-height:1.12;">{post.title}</span>
+          <span style="font-size:16px;line-height:1.6;color:#8A93A8;">{post.homeExcerpt ?? post.excerpt}</span>
+          <span style="margin-top:auto;padding-top:10px;font-weight:600;font-size:15px;color:#93A5FF;">Read &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- THOUGHTS + PODCAST PANELS -->
+  <section id="podcast" style="padding:clamp(80px,12vw,140px) clamp(20px,5vw,72px) 0;max-width:1440px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+      <div data-reveal="1" style="display:flex;flex-direction:column;gap:18px;background:var(--panel-blue);border:1px solid rgba(59,91,255,0.35);border-radius:28px;padding:clamp(32px,4vw,56px);">
+        <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#93A5FF;">03 / THE BLOG</p>
+        <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(32px,3.6vw,52px);letter-spacing:-0.02em;">Thoughts</h3>
+        <p style="margin:0;font-size:18px;line-height:1.65;color:var(--prose);max-width:460px;">Quick, actionable reads on AI, creativity, and the future of work &mdash; without the hype.</p>
+        <a data-magnetic href="/thoughts/" class="btn-cobalt" style="margin-top:auto;align-self:flex-start;">Read articles</a>
+      </div>
+      <div data-reveal="2" style="display:flex;flex-direction:column;gap:18px;background:#191307;border:1px solid rgba(232,180,76,0.35);border-radius:28px;padding:clamp(32px,4vw,56px);">
+        <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#E8B44C;">04 / PODCAST · TECH SIMPLIFIED NETWORK</p>
+        <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(32px,3.6vw,52px);letter-spacing:-0.02em;">Tech Innovation Made Human</h3>
+        <p style="margin:0;font-size:18px;line-height:1.65;color:var(--prose);max-width:460px;">A show I co-host exploring how innovation empowers people in real life.</p>
+        <a data-magnetic href="https://www.youtube.com/playlist?list=PL0REkMdZtFzPV9QSVm3D4iIuTeh99Mhwa" target="_blank" rel="noopener" class="btn-gold lg" style="margin-top:auto;align-self:flex-start;font-size:16px;padding:14px 28px;">Listen on YouTube &nearr;</a>
+        <p style="margin:0;font-family:var(--mono);font-size:13px;line-height:1.6;color:var(--slate);">I also collaborate with Tech Simplified to help teams implement practical AI solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="padding:clamp(80px,12vw,140px) clamp(20px,5vw,72px) 0;max-width:1440px;margin:0 auto;">
+    <div class="about-grid" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:clamp(32px,5vw,80px);align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <span data-reveal="0" class="eyebrow">05 / ABOUT</span>
+        <h2 data-reveal="1" style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(40px,5.5vw,76px);letter-spacing:-0.025em;line-height:1.04;">Making tech meaningful &mdash; and human.</h2>
+        <div data-reveal="2" style="display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.7;color:var(--prose);max-width:640px;">
+          <p style="margin:0;">I&rsquo;m a technologist, connector, and creative who&rsquo;s spent over a decade helping people and organizations make sense of technology &mdash; from Microsoft 365 to applied AI. I&rsquo;ve worked across architecture, customer success, and solution design &mdash; turning complexity into clarity and building systems that actually work for people.</p>
+          <p style="margin:0;">Technology is moving fast, but transformation only sticks when people are empowered to understand and use it. My goal is to bridge that gap: to make innovation accessible, relatable, and genuinely helpful &mdash; helping others adapt, learn, and lead, not just keep up.</p>
+          <p style="margin:0;">Based in Charlotte, NC, I&rsquo;m driven by creativity and connection &mdash; whether I&rsquo;m behind a camera, sketching a new idea, or recording for my podcast. Lifelong learner, occasional philosopher over a glass of wine.</p>
+        </div>
+        <ul data-reveal="3" style="list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;font-family:var(--mono);font-size:15px;color:#F5F2EA;">
+          <li style="display:flex;gap:12px;align-items:baseline;"><span style="color:#E8B44C;">✦</span> AI adoption &amp; enablement</li>
+          <li style="display:flex;gap:12px;align-items:baseline;"><span style="color:#E8B44C;">✦</span> Modern work &amp; productivity</li>
+          <li style="display:flex;gap:12px;align-items:baseline;"><span style="color:#E8B44C;">✦</span> Creative builds &amp; prototypes</li>
+          <li style="display:flex;gap:12px;align-items:baseline;"><span style="color:#E8B44C;">✦</span> Storytelling &amp; speaking</li>
+        </ul>
+        <div data-reveal="4" style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:12px;">
+          <a data-magnetic href="mailto:info@jeremymckellar.com" class="btn-gold lg">Work with me</a>
+          <a data-magnetic href="https://www.linkedin.com/in/jeremy-mckellar/" target="_blank" rel="noopener" class="btn-outline" style="padding:15px 30px;">Connect on LinkedIn &nearr;</a>
+          <a href="https://ingoodconnects.com" target="_blank" rel="noopener" style="font-weight:600;font-size:16px;color:#93A5FF;">In Good Company &nearr;</a>
+        </div>
+      </div>
+      <div data-reveal="2" style="position:relative;aspect-ratio:4/5;border-radius:28px;border:1px solid rgba(245,242,234,0.12);overflow:hidden;background:var(--card);">
+        <img src="/assets/jeremy-headshot.jpg" alt="Jeremy McKellar" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="margin-top:clamp(96px,14vw,180px);border-top:1px solid var(--hairline);padding:clamp(72px,10vw,140px) clamp(20px,5vw,72px) 44px;">
+    <p data-reveal="0" style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(44px,8.5vw,132px);letter-spacing:-0.03em;line-height:1.04;">Stay <em style="color:#E8B44C;">curious</em>.<br />Stay connected.</p>
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:48px;font-weight:600;font-size:17px;">
+      <a href="mailto:info@jeremymckellar.com" style="color:#93A5FF;">info@jeremymckellar.com</a>
+      <a href="https://www.linkedin.com/in/jeremy-mckellar/" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+      <a href="https://ingoodconnects.com" target="_blank" rel="noopener">In Good Company &nearr;</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:64px;font-family:var(--mono);font-size:13px;color:var(--slate);">
+      <span>&copy; 2026 Jeremy McKellar · Charlotte, NC</span>
+      <a href="#top" style="color:var(--slate);">Back to top &uarr;</a>
+    </div>
+  </footer>
+</div>
+</BaseLayout>
