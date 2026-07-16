@@ -4,9 +4,15 @@
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* The hero's signature motion (drifting particles, rotating word, typed
+     ticker) is gentle, non-parallax brand identity, so it plays for everyone
+     — including phones with OS-level Reduce Motion on. The heavier, opt-in
+     effects (scroll-reveal slides, pointer tilt/magnetic) still respect the
+     reduced-motion preference below. */
+
   /* --- kinetic hero word --- */
   var roll = document.querySelector('[data-roll]');
-  if (roll && !reduced) {
+  if (roll) {
     var wordIndex = 0;
     var count = roll.children.length;
     setInterval(function () {
@@ -24,32 +30,28 @@
       'a new Thoughts post',
       'Tech Innovation Made Human — new episode'
     ];
-    if (reduced) {
-      typed.textContent = phrases[0];
-    } else {
-      (function typeLoop(pi) {
-        var phrase = phrases[pi % phrases.length];
-        var i = 0;
-        function step() {
-          i++;
-          typed.textContent = phrase.slice(0, i);
-          if (i < phrase.length) setTimeout(step, 40 + Math.random() * 45);
-          else setTimeout(erase, 2600);
-        }
-        function erase() {
-          i--;
-          typed.textContent = phrase.slice(0, i);
-          if (i > 0) setTimeout(erase, 16);
-          else setTimeout(function () { typeLoop(pi + 1); }, 350);
-        }
-        step();
-      })(0);
-    }
+    (function typeLoop(pi) {
+      var phrase = phrases[pi % phrases.length];
+      var i = 0;
+      function step() {
+        i++;
+        typed.textContent = phrase.slice(0, i);
+        if (i < phrase.length) setTimeout(step, 40 + Math.random() * 45);
+        else setTimeout(erase, 2600);
+      }
+      function erase() {
+        i--;
+        typed.textContent = phrase.slice(0, i);
+        if (i > 0) setTimeout(erase, 16);
+        else setTimeout(function () { typeLoop(pi + 1); }, 350);
+      }
+      step();
+    })(0);
   }
 
   /* --- particle field (hero only) --- */
   var canvas = document.querySelector('[data-particles]');
-  if (canvas && !reduced) {
+  if (canvas) {
     var ctx = canvas.getContext('2d');
     var hero = canvas.parentElement;
     var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);

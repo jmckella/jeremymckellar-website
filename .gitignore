@@ -2,3 +2,8 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Personal/business files that live in this folder but must never be published
+prospects.xlsx
+website-scorecard.md
+*.xlsx
