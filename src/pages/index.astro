@@ -4,6 +4,11 @@ import posts from '../data/posts.json';
 import FollowUpdates from '../components/FollowUpdates.astro';
 
 const latest = posts.slice(0, 3);
+const workbenchPhrases = [
+  'practical AI and everyday workflows',
+  'useful tools, built with curiosity',
+  'technology that brings people together',
+];
 ---
 <BaseLayout
   title="Jeremy McKellar — Technologist & Storyteller"
@@ -65,9 +70,12 @@ const latest = posts.slice(0, 3);
   </section>
 
   <!-- STATUS TICKER -->
-  <div style="border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:rgba(59,91,255,0.06);padding:18px clamp(20px,5vw,72px);display:flex;align-items:baseline;gap:16px;font-family:var(--mono);font-size:14px;letter-spacing:0.1em;">
-    <span style="color:#E8B44C;flex-shrink:0;">&#9656; ON MY WORKBENCH</span>
-    <span style="color:var(--prose);min-height:1.4em;"><span data-typed>practical AI · useful tools · human connection</span><span class="typed-cursor"></span></span>
+  <div class="workbench-ticker">
+    <span class="workbench-label">&#9656; ON MY WORKBENCH</span>
+    <span class="workbench-text" data-typed-phrases={JSON.stringify(workbenchPhrases)}>
+      {workbenchPhrases.map((phrase) => <span class="workbench-sizer" aria-hidden="true">{phrase}<span class="typed-cursor"></span></span>)}
+      <span class="workbench-animation"><span data-typed>{workbenchPhrases[0]}</span><span class="typed-cursor" aria-hidden="true"></span></span>
+    </span>
   </div>
 
   <section data-chapter="intro" id="approach" class="content-section approach-section">

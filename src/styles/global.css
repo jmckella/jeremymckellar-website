@@ -139,6 +139,29 @@ input::placeholder { color: var(--slate); }
 }
 .mono-caption { font-family: var(--mono); font-size: 13px; color: var(--slate); }
 
+/* Reserve every phrase's wrapped size before typing starts. Hidden grid layers
+   track the real font and available width without animation-driven reflow. */
+.workbench-ticker {
+  border-block: 1px solid var(--hairline);
+  background: rgba(59,91,255,0.06);
+  padding: 18px clamp(20px,5vw,72px);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+.workbench-label { color: var(--gold); flex-shrink: 0; }
+.workbench-text { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1; min-width: 0; color: var(--prose); }
+.workbench-text > span { grid-area: 1 / 1; min-width: 0; overflow-wrap: anywhere; }
+.workbench-sizer { visibility: hidden; pointer-events: none; user-select: none; }
+.workbench-sizer .typed-cursor { animation: none; }
+@media (max-width: 600px) {
+  .workbench-ticker { flex-direction: column; align-items: stretch; gap: 6px; }
+}
+
 /* ticker cursor */
 @keyframes jm-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 .typed-cursor {

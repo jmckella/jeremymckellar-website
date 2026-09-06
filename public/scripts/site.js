@@ -20,11 +20,7 @@
   var typed = document.querySelector('[data-typed]');
   // Keep the signature ticker typing even when the device requests less motion.
   if (typed) {
-    var phrases = [
-      'practical AI and everyday workflows',
-      'useful tools, built with curiosity',
-      'technology that brings people together'
-    ];
+    var phrases = JSON.parse(typed.closest('[data-typed-phrases]').getAttribute('data-typed-phrases'));
     (function typeLoop(pi) {
       var phrase = phrases[pi % phrases.length];
       var i = 0;
