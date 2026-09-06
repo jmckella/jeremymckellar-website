@@ -1,92 +1,43 @@
-<p>There's this moment that happens every time I write something I want to share. I finish the piece, feel good about it, and then... the dread sets in. Because now I have to post it.</p>
-      <p>Not just post it once. Post it five different ways.</p>
+<p>I built the first version of the Universal Document Formatter because I was tired of doing the same small task after finishing a piece of writing: reformatting it for wherever I wanted to share it.</p>
+<p>The idea was simple. Paste the text once, choose a destination, and spend less time adjusting paragraph breaks or splitting a long post by hand.</p>
+<p>That first prototype took about two hours. The version you can use today reflects more work since then, including a recent facelift with Codex. The goal is still the same: make the last step between writing and sharing a little easier.</p>
 
-      <div style="aspect-ratio:16/9;border-radius:16px;border:1px solid rgba(245,242,234,0.12);background:repeating-linear-gradient(45deg,rgba(245,242,234,0.045) 0 12px,rgba(245,242,234,0) 12px 24px),#12204A;display:flex;align-items:center;justify-content:center;margin:8px 0 34px;">
-        <p style="margin:0;padding:24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.7;color:#8A93A8;">[ IMAGE PLACEHOLDER ]<br>DocumentFormatter1.png &mdash; tool screenshot</p>
-      </div>
+<h2>A small problem worth solving</h2>
+<p>When I first wrote about this project, I described the friction of preparing the same idea for several platforms. The writing was done, but sharing it still meant another round of copying, spacing, checking, and editing.</p>
+<p>I started by talking through that problem with Claude, then used AI-assisted development with Bolt.new to build a working prototype. A text input, a platform selector, and a preview were enough to test the idea.</p>
+<p>The two-hour timeline belongs to that first prototype. Getting something working quickly was useful; returning to it and making the experience clearer has been another part of the project.</p>
 
-      <p>LinkedIn wants that professional polish with double line breaks and a 3,000 character limit. Twitter needs it threaded if it's long, with each tweet staying under 280 characters. WhatsApp formatting gets weird on mobile if you don't manually add those extra line breaks. Email needs a proper greeting and signature. Instagram wants it optimized for that preview text and maybe some hashtags.</p>
-      <p>Same content. Five different formatting requirements. Every single time.</p>
-      <p>And here's the thing that kept getting me: I'd spend 20 minutes writing something thoughtful, then another 5&ndash;7 minutes just... reformatting it. Copy-pasting, manually adding line breaks, counting characters, splitting paragraphs, threading tweets.</p>
-      <p>It felt absurd. Like spending time solving a problem that shouldn't exist.</p>
+<h2>What changed in the refresh</h2>
+<p>The recent Codex update gave the app a clearer visual identity and a more focused workspace. The opening now says exactly what it is for: <strong>“Your words. Ready anywhere.”</strong> Below it, the platform tabs lead directly into your content and an editable preview.</p>
+<p>The editor and preview sit side by side on wider screens. Copy and download controls live with the output, so the next step is easy to find. Light and dark modes let you choose the appearance that works for you.</p>
+<p>You can also load sample text to see the tool in action before pasting anything of your own. Character and word counts help you understand the input, while the preview gives you a place to make final adjustments.</p>
+<p>The useful change is more than the new look. You can review and edit the result before taking it to the platform where you plan to share it.</p>
 
-      <h2>The Problem I Kept Running Into</h2>
-      <p>I write a lot. Blog posts, thoughts on technology, reflections on building things. And I want to share those ideas across different platforms because different people consume content in different ways. Some folks are on LinkedIn, others prefer Twitter, some just want an email newsletter.</p>
-      <p>But each platform has its own quirks. LinkedIn's professional tone means I want those clean paragraph breaks for readability. Twitter's character limit means I need to think about natural breaking points and thread structure. WhatsApp's mobile rendering means I need extra spacing or everything mushes together. Email needs that formal structure with a greeting and closing.</p>
-      <p>I tried keeping notes about each platform's requirements. I built little mental checklists. "Okay, for LinkedIn remember to add the extra line breaks. For Twitter, find natural points to split at 280 characters. For WhatsApp, add those mobile-friendly breaks."</p>
-      <p>But every time I'd sit down to share something, I'd forget a step. Or I'd get the Twitter threading wrong and have to delete and repost. Or I'd paste into LinkedIn and realize the formatting looked terrible and have to manually fix it.</p>
-      <p>It was the kind of small, repetitive friction that shouldn't matter. But it added up. Five minutes here, seven minutes there. And more importantly, it made sharing feel like a chore instead of something I wanted to do.</p>
-      <p>I found myself sometimes just... not sharing things because I didn't want to deal with the reformatting hassle. Which is ridiculous, right? Having good content and not sharing it because the logistics are annoying?</p>
+<h2>What the app does today</h2>
+<p>The current version has five destinations:</p>
+<ul>
+  <li><strong>LinkedIn:</strong> adds readable paragraph spacing and shows a character count beside an editable preview.</li>
+  <li><strong>X:</strong> turns longer text into numbered posts, with editable text and character counts for each one. You can copy an individual post or the whole thread.</li>
+  <li><strong>Email:</strong> prepares clean paragraphs to paste into your email. You add the greeting, subject, and sign-off that fit the recipient.</li>
+  <li><strong>WhatsApp:</strong> provides a dedicated formatting destination and a preview you can adjust before copying.</li>
+  <li><strong>Instagram:</strong> cleans up caption spacing and shows the character count without cutting your words.</li>
+</ul>
+<p>The workflow is straightforward: paste your text, choose a tab, review the output, then copy or download it. No account is needed, and formatting happens in your browser.</p>
+<p><strong>One detail to know:</strong> changing the source text or switching platforms resets edits made in the preview. Finish choosing your destination before making those final tweaks.</p>
+<p>This is a formatting tool. You still decide what to say and where to publish it. It does not post to your accounts, and a formatted preview is still worth reviewing in the destination app before you share.</p>
 
-      <h2>The Moment Something Clicked</h2>
-      <p>I was reformatting a blog post for the third time in a week when it hit me: this is literally just rules. Platform-specific rules about line breaks, character limits, and formatting conventions.</p>
-      <p>Rules are exactly what computers are good at.</p>
-      <p>Why was I manually doing this every time? Why didn't I just... build something that handles it automatically?</p>
-      <p>I opened a new conversation with Claude and started describing the problem. Not as a grand vision for a revolutionary tool, but just as the annoying thing I was dealing with. "Here's what keeps frustrating me about posting content to different platforms."</p>
-      <p>Within minutes, we were sketching out what this could look like. A simple text input, platform selection, automatic formatting based on platform-specific rules. Nothing fancy, just a tool that handles the repetitive stuff so I don't have to think about it.</p>
-      <p>Two hours later, I had a working prototype.</p>
+<h2>What I would say differently now</h2>
+<p>The original article described some behavior too broadly. Email formatting does not need to invent a greeting or signature, and an Instagram caption does not need extra hashtags added automatically. The current experience keeps those decisions with you.</p>
+<p>I also originally estimated saving five to seven minutes when preparing a piece of content. That was a personal estimate, not a measured result for everyone who uses the app. Your benefit will depend on what you write and how you share it.</p>
+<p>The more useful question is whether the tool removes a repetitive step from your own workflow. Try it with something you have already written and see whether getting it ready to share feels easier.</p>
 
-      <h2>What I Actually Built</h2>
-      <p>The Universal Document Formatter is almost embarrassingly simple in concept. You paste your content, select which platform you're formatting for, and it handles the platform-specific requirements automatically.</p>
-      <p>For LinkedIn, it adds those professional double line breaks that make text readable, enforces the 3,000 character limit, and gives you a clean preview. For Twitter, it automatically threads your content if it's longer than 280 characters, finding natural breaking points at sentence boundaries so your threads read smoothly. For WhatsApp, it optimizes those mobile line breaks so your message doesn't turn into a wall of text. For email, it adds a greeting and signature template. For Instagram, it helps with preview optimization and hashtag organization.</p>
-      <p>The technical stack is pretty straightforward: React 18, TypeScript, Tailwind CSS, all built with Vite. Nothing cutting-edge or experimental. Just solid, reliable tools that work well together.</p>
-      <p>What makes it useful isn't the complexity&mdash;it's that it handles the specific, annoying rules I kept forgetting. The Twitter threading logic finds sentence boundaries. The WhatsApp formatter knows mobile rendering quirks. The LinkedIn version understands professional formatting conventions.</p>
-      <p>I built it using AI-assisted development with Bolt.new, which let me go from concept to working prototype incredibly fast. This isn't because I can't code&mdash;I can. It's because I'm learning to use AI as a force multiplier for the parts that don't require deep custom logic.</p>
-      <p>The character counting, the line break insertion, the platform-specific rules&mdash;that's all well-established logic. No need to write it from scratch when AI can generate clean, working code in minutes.</p>
+<h2>What this project keeps teaching me</h2>
+<p>Starting with a problem I understood gave the prototype a clear purpose. It did not need a long feature list to be worth building.</p>
+<p>But solving my own problem is a starting point, not proof that the experience works for everyone. A quick prototype can show that an idea is possible. Clear controls, useful previews, and continued refinement help make it something another person can pick up and use.</p>
+<p>That is what this refresh represents: coming back to a small, useful idea and improving how it feels to use. The original question still holds up: what repetitive task in your day is small enough to solve, but annoying enough that you keep noticing it?</p>
 
-      <h2>The Real Test: Does It Actually Save Time?</h2>
-      <p>Here's the honest assessment after using this tool regularly: yes, it saves time. But maybe not in the way I initially expected.</p>
-      <p>The hard numbers: I estimate it saves me about 5&ndash;7 minutes per piece of content I share. Multiply that by the 10&ndash;15 pieces I share per month, and that's 50&ndash;100 minutes saved. Not life-changing, but not nothing either.</p>
-      <p>But the real value isn't just the time saved&mdash;it's the friction removed.</p>
-      <p>Before this tool, there was always this slight resistance to sharing content. I'd finish writing something and think "Okay, now I have to reformat this for three different platforms." It created a mental barrier, even if it was small.</p>
-      <p>Now? I paste, click, copy, done. The barrier is gone. I share more freely, which means I share more often, which means my ideas reach more people. That's harder to quantify but probably more valuable than the time savings.</p>
-      <p>I've also noticed I'm more likely to repurpose content. Got a blog post? Easy to turn it into a Twitter thread now. Have a long reflection? Simple to format it for both LinkedIn and email. The tool makes it frictionless to maximize the reach of content I've already created.</p>
-      <p>The platform is deployed on Netlify, completely free to use, with security monitoring enabled. I use it almost daily now. And occasionally I'll get messages from other content creators asking about it, which tells me I'm not the only one who found this formatting friction annoying.</p>
-
-      <h2>What I Learned Building This</h2>
-      <p>Building the Document Formatter taught me something important about product development: the best tools often solve your own problems.</p>
-      <p>I didn't build this because I thought "content creators need a document formatter." I built it because I was personally frustrated with manually reformatting content five different ways. The fact that other people find it useful is validation, but it wasn't the starting point.</p>
-      <p>This matters because when you're solving your own problem, you immediately know if the solution actually works. There's no guessing about user needs or running surveys to validate product-market fit. You are the user. If it solves your problem, it works. If it doesn't, you know immediately.</p>
-      <p>I also learned about the power of AI-assisted rapid prototyping. Two hours from concept to working prototype. That's not marketing speak&mdash;that's the actual timeline. This changes the equation for what's worth building.</p>
-      <p>Before AI-assisted development, I might have thought "yeah, this formatting thing is annoying, but is it worth spending two days building a custom tool?" Probably not. But two hours? Absolutely worth it.</p>
-      <p>The barrier to going from "this is annoying" to "I have a working solution" has dropped dramatically. That changes what's possible for solo developers and small teams.</p>
-      <p>Finally, I learned that production-ready doesn't have to mean complicated. This tool uses local storage, not a database. It's client-side only, no backend server. The code is clean and well-structured, but it's not over-engineered. Sometimes the simple solution is the right solution.</p>
-
-      <h2>Where I'm Still Figuring Things Out</h2>
-      <p>There are obvious ways this tool could evolve. I could add analytics to see which platforms people format for most often. I could build in scheduling features to actually post the formatted content. I could integrate with platform APIs for one-click posting. I could add more platforms, more formatting options, more customization.</p>
-      <p>But here's what I'm wrestling with: should I?</p>
-      <p>Every feature I add increases complexity. More code to maintain, more potential bugs, more decisions for users to make. The tool works because it's simple and focused. Adding features might make it more capable but less useful.</p>
-      <p>I'm also thinking about the open source angle. The code is on GitHub, available for anyone to use, modify, or learn from. Part of me wants to actively maintain and expand it as an open source project. Another part thinks it's valuable precisely because it's complete and stable as-is.</p>
-      <p>There's also the question of monetization. Could this be a paid product? Maybe. Should it be? I'm not sure. The value it provides is real but incremental. The time it saves is meaningful but not transformative. Would people pay for that? Would I want to deal with payment processing, customer support, and feature requests for a tool this focused?</p>
-      <p>I genuinely don't know the answers yet.</p>
-
-      <h2>What This Means for How I Build Things</h2>
-      <p>The Document Formatter represents something bigger than just a formatting tool. It's proof of concept for a different approach to product development.</p>
-      <p>Instead of spending months building something I think people might want, I can spend hours building something I know I need. If it solves my problem, it probably solves someone else's too. If it doesn't, I've invested hours instead of months.</p>
-      <p>This is possible now in ways it wasn't even a year ago. AI-assisted development, modern frameworks, simplified deployment&mdash;the barriers to going from idea to working product have dropped dramatically.</p>
-      <p>I'm starting to see my development work differently. Not as "I need to spend months building the perfect version of this product," but as "I can spend hours solving this problem and see if the solution resonates."</p>
-      <p>The Document Formatter works. It saves time. It removes friction. It's been deployed and used consistently for months without major issues. That's success, even if it's not venture-scale success.</p>
-      <p>And honestly? That feels more meaningful than building something bigger that nobody uses.</p>
-
-      <h2>The Question I'm Left With</h2>
-      <p>I keep coming back to this: how many problems am I tolerating that I could solve in an afternoon?</p>
-      <p>Not big, systemic problems that require massive solutions. Small, annoying frictions that add up over time. Repetitive tasks that follow clear rules. Formatting headaches. Copy-paste workflows. Manual processes that could be automated.</p>
-      <p>The barrier to solving these problems used to be time and technical complexity. Both of those barriers are lower now. Sometimes dramatically lower.</p>
-      <p>Which means the real question isn't "Is this problem worth solving?" It's "Why am I still doing this manually?"</p>
-      <p>I built a document formatter in two hours. It saves me five minutes every time I use it. After a month, it was time-positive. After a year? Significantly time-positive.</p>
-      <p>More importantly, it removed friction from something I do regularly. Made sharing content easier. Lowered the barrier to getting my ideas out into the world.</p>
-      <p>That's worth two hours.</p>
-      <p>So here's what I'm wondering: What are you still doing manually that's just... rules? What friction are you tolerating that could be automated? What small annoyances have you accepted as just part of your workflow?</p>
-      <p>Maybe it's time to stop accepting them.</p>
-      <p>Maybe it's time to spend an afternoon building the solution.</p>
-
-      <h2>About Jeremy</h2>
-      <p>I'm a Connector, Creative, and Tech Futurist focused on making technology meaningful and accessible. I build tools that solve real problems, explore how AI is changing what's possible for individual developers, and share what I learn along the way. You can find more of my work at <a href="/">jeremymckellar.com</a> or check out the <a href="https://document-formatter.netlify.app" target="_blank" rel="noopener">Universal Document Formatter</a> yourself.</p>
-
-      <h2>A Note on AI Collaboration</h2>
-      <p>This article was developed in collaboration with Claude as a thinking partner to help synthesize and articulate my experiences building the Document Formatter. I believe AI tools can amplify our human insights and help us share our stories more effectively&mdash;both in building products and in writing about them. The tool I'm writing about was built using AI-assisted development, and this article about building it was refined with AI collaboration. That feels appropriately meta.</p>
-
-      <h2>Let's Talk</h2>
-      <p>What friction are you dealing with in your workflow that could be solved with a simple tool? What are you still doing manually that bothers you every time? I'd love to hear what problems you're tolerating and whether you've thought about just... building the solution. Connect with me to continue the conversation.</p>
-      <p><strong>Try the Universal Document Formatter:</strong> <a href="https://document-formatter.netlify.app" target="_blank" rel="noopener">document-formatter.netlify.app</a></p>
-      <p><strong>View the code on GitHub:</strong> <a href="https://github.com/jeremymckellar/Universal-Document-Formatter" target="_blank" rel="noopener">Universal-Document-Formatter Repository</a></p>
+<h2>Try it with your own writing</h2>
+<p>Bring a post, an email draft, or a few paragraphs you want to share. Choose a destination, make any final edits, and take the result with you.</p>
+<p><a href="https://document-formatter.netlify.app/" target="_blank" rel="noopener">Open the Universal Document Formatter &nearr;</a><br><a href="https://github.com/jmckella/Universal-Document-Formatter" target="_blank" rel="noopener">View the project on GitHub &nearr;</a></p>
+<p>Have a similar workflow you want to simplify? <a href="/#connect">Let’s connect.</a></p>
+<p style="font-size:15px;color:var(--slate);">This story was originally developed with Claude as a writing partner and updated with Codex to reflect the current app. AI-assisted development supported the original prototype and the recent redesign.</p>

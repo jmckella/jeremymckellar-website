@@ -49,7 +49,10 @@
     "date": "SEP 26, 2025",
     "category": "EXPERIMENTS",
     "title": "I Built a Document Formatter in 2 Hours to Stop Wasting Time",
-    "excerpt": "The frustration of reformatting content for different platforms led me to build a tool that saves 5 minutes per post."
+    "excerpt": "From a two-hour prototype to a refreshed formatting workspace: what changed, how it works today, and what I am learning along the way.",
+    "updated": "SEP 6, 2026",
+    "heroImage": "/assets/formatter-preview-2026.jpg",
+    "heroImageAlt": "The refreshed Universal Document Formatter showing platform tabs, sample content, and an editable LinkedIn preview."
   },
   {
     "slug": "power-of-perspective-career-challenges",

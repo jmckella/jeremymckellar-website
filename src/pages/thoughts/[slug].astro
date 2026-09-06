@@ -32,12 +32,18 @@ if (!body) throw new Error(`Missing article body for ${post.slug}`);
   <main id="main-content" style="max-width:860px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,48px) 40px;">
     <a href="/thoughts/" style="font-family:var(--mono);font-size:13px;letter-spacing:0.16em;color:var(--slate);">&larr; ALL THOUGHTS</a>
     <p style="margin:36px 0 16px;font-family:var(--mono);font-size:13px;letter-spacing:0.16em;color:#E8B44C;">{post.date} · {post.category}</p>
+    {'updated' in post && <p style="margin:0 0 16px;font-family:var(--mono);font-size:13px;color:var(--slate);">Updated {post.updated}</p>}
     <h1 style="margin:0 0 20px;font-family:var(--display);font-weight:600;font-size:clamp(34px,5.5vw,64px);letter-spacing:-0.025em;line-height:1.06;">{post.title}</h1>
     <p style="margin:0 0 40px;font-size:16px;color:var(--slate);">Written by Jeremy McKellar</p>
 
-    <div aria-hidden="true" style="width:100%;height:clamp(200px,30vw,340px);border-radius:20px;overflow:hidden;border:1px solid rgba(245,242,234,0.12);margin-bottom:56px;">
+    {'heroImage' in post ? (
+      <figure style="margin:0 0 48px;">
+        <img src={post.heroImage} alt={post.heroImageAlt} width="1348" height="926" style="display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--hairline);" />
+        <figcaption style="margin-top:12px;font-size:14px;line-height:1.6;color:var(--slate);">The current formatter, shown with sample text and an editable LinkedIn preview.</figcaption>
+      </figure>
+    ) : <div aria-hidden="true" style="width:100%;height:clamp(200px,30vw,340px);border-radius:20px;overflow:hidden;border:1px solid rgba(245,242,234,0.12);margin-bottom:56px;">
       <abstract-header seed={post.slug} variant="hero" style="display:block;width:100%;height:100%;"></abstract-header>
-    </div>
+    </div>}
 
     <article set:html={body} />
 
