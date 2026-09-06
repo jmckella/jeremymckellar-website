@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import posts from '../../data/posts.json';
+import FollowUpdates from '../../components/FollowUpdates.astro';
 
 export function getStaticPaths() {
   return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
@@ -23,12 +24,12 @@ if (!body) throw new Error(`Missing article body for ${post.slug}`);
       <a href="/" aria-label="Jeremy McKellar — home" class="wordmark">JM<span>.</span></a>
       <div style="display:flex;align-items:center;gap:28px;">
         <a href="/thoughts/" style="font-size:15px;font-weight:500;">All thoughts</a>
-        <a href="mailto:info@jeremymckellar.com" class="btn-gold">Work with me</a>
+        <a href="/#connect" class="btn-gold">Let’s connect</a>
       </div>
     </nav>
   </header>
 
-  <main style="max-width:860px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,48px) 40px;">
+  <main id="main-content" style="max-width:860px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,48px) 40px;">
     <a href="/thoughts/" style="font-family:var(--mono);font-size:13px;letter-spacing:0.16em;color:var(--slate);">&larr; ALL THOUGHTS</a>
     <p style="margin:36px 0 16px;font-family:var(--mono);font-size:13px;letter-spacing:0.16em;color:#E8B44C;">{post.date} · {post.category}</p>
     <h1 style="margin:0 0 20px;font-family:var(--display);font-weight:600;font-size:clamp(34px,5.5vw,64px);letter-spacing:-0.025em;line-height:1.06;">{post.title}</h1>
@@ -55,14 +56,7 @@ if (!body) throw new Error(`Missing article body for ${post.slug}`);
       )}
     </div>
 
-    <div style="margin-top:64px;background:var(--panel-blue);border:1px solid rgba(59,91,255,0.35);border-radius:24px;padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:14px;">
-      <p style="margin:0;font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-0.015em;">Enjoyed this? Get the next one in your inbox.</p>
-      <form data-subscribe class="subscribe-form">
-        <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address" style="min-width:200px;padding:13px 18px;background:rgba(245,242,234,0.06);" />
-        <button type="submit" class="btn-gold lg" style="font-size:16px;padding:13px 26px;">Subscribe</button>
-      </form>
-      <p class="subscribe-confirm" style="margin:0;">Thanks &mdash; you&rsquo;re on the list. (Form goes live with MailerLite.)</p>
-    </div>
+    <div style="margin-top:64px;"><FollowUpdates /></div>
   </main>
 
   <footer class="site-footer" style="margin-top:56px;">

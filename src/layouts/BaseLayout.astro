@@ -22,12 +22,23 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content={new URL('/assets/jeremy-headshot.jpg', Astro.site)} />
+  <meta property="og:image:alt" content="Jeremy McKellar — Technologist and Storyteller" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={new URL('/assets/jeremy-headshot.jpg', Astro.site)} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'Person',
+    '@id': 'https://jeremymckellar.com/#person', name: 'Jeremy McKellar',
+    url: 'https://jeremymckellar.com/', image: 'https://jeremymckellar.com/assets/jeremy-headshot.jpg',
+    sameAs: ['https://www.linkedin.com/in/jeremy-mckellar/'],
+    knowsAbout: ['Microsoft 365', 'Artificial intelligence', 'Solution design', 'Storytelling']
+  })} />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="grain" aria-hidden="true"></div>
   <slot />
   <script src="/scripts/site.js" defer></script>

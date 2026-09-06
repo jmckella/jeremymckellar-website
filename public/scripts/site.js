@@ -1,18 +1,12 @@
 /* Site behaviors ported from the design prototype: kinetic hero word, typed
    status line, particle field, scroll reveals, magnetic buttons, card tilt,
-   mobile menu, subscribe placeholders. All honor prefers-reduced-motion. */
+   mobile menu. All honor prefers-reduced-motion. */
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* The hero's signature motion (drifting particles, rotating word, typed
-     ticker) is gentle, non-parallax brand identity, so it plays for everyone
-     — including phones with OS-level Reduce Motion on. The heavier, opt-in
-     effects (scroll-reveal slides, pointer tilt/magnetic) still respect the
-     reduced-motion preference below. */
-
   /* --- kinetic hero word --- */
   var roll = document.querySelector('[data-roll]');
-  if (roll) {
+  if (roll && !reduced) {
     var wordIndex = 0;
     var count = roll.children.length;
     setInterval(function () {
@@ -23,12 +17,11 @@
 
   /* --- typed status line --- */
   var typed = document.querySelector('[data-typed]');
-  if (typed) {
+  if (typed && !reduced) {
     var phrases = [
-      'the next public prototype',
-      'AI workflows that make work human',
-      'a new Thoughts post',
-      'Tech Innovation Made Human — new episode'
+      'practical AI and everyday workflows',
+      'useful tools, built with curiosity',
+      'technology that brings people together'
     ];
     (function typeLoop(pi) {
       var phrase = phrases[pi % phrases.length];
@@ -51,7 +44,7 @@
 
   /* --- particle field (hero only) --- */
   var canvas = document.querySelector('[data-particles]');
-  if (canvas) {
+  if (canvas && !reduced) {
     var ctx = canvas.getContext('2d');
     var hero = canvas.parentElement;
     var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -81,6 +74,14 @@
       mx = (e.clientX - r.left) / r.width;
       my = (e.clientY - r.top) / r.height;
     });
+    var particleFrame = 0;
+    var heroVisible = true;
+    var particlePreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var syncParticles = function () {
+      cancelAnimationFrame(particleFrame);
+      particleFrame = 0;
+      if (heroVisible && !document.hidden && !particlePreference.matches) particleFrame = requestAnimationFrame(tick);
+    };
     var tick = function (t) {
       smx += (mx - smx) * 0.04; smy += (my - smy) * 0.04;
       ctx.clearRect(0, 0, W, H);
@@ -97,9 +98,49 @@
         ctx.fillStyle = p.gold ? 'rgba(232,180,76,' + a + ')' : 'rgba(91,116,255,' + a + ')';
         ctx.fill();
       }
-      requestAnimationFrame(tick);
+      particleFrame = requestAnimationFrame(tick);
     };
-    requestAnimationFrame(tick);
+    new IntersectionObserver(function (entries) {
+      heroVisible = entries[0].isIntersecting;
+      syncParticles();
+    }).observe(hero);
+    document.addEventListener('visibilitychange', syncParticles);
+    particlePreference.addEventListener('change', syncParticles);
+  }
+
+  /* Scroll-linked depth: native scroll stays in control. Only decorative
+     layers move; copy and click targets remain stable. One frame per scroll. */
+  var story = document.querySelector('[data-scroll-story]');
+  if (story) {
+    var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var opening = story.querySelector('.hero-section');
+    var chapters = story.querySelectorAll('[data-chapter]');
+    var framePending = false;
+    var updateDepth = function () {
+      framePending = false;
+      if (motionPreference.matches) {
+        opening.style.removeProperty('--opening-depth');
+        return;
+      }
+      var rect = opening.getBoundingClientRect();
+      var progress = Math.max(0, Math.min(1, -rect.top / rect.height));
+      opening.style.setProperty('--opening-depth', progress.toFixed(3));
+    };
+    var scheduleDepth = function () {
+      if (!framePending) { framePending = true; requestAnimationFrame(updateDepth); }
+    };
+    window.addEventListener('scroll', scheduleDepth, { passive: true });
+    window.addEventListener('resize', scheduleDepth, { passive: true });
+    motionPreference.addEventListener('change', scheduleDepth);
+    scheduleDepth();
+    var chapterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          story.setAttribute('data-current-chapter', entry.target.getAttribute('data-chapter'));
+        }
+      });
+    }, { rootMargin: '-15% 0px -45% 0px', threshold: 0 });
+    chapters.forEach(function (chapter) { chapterObserver.observe(chapter); });
   }
 
   /* --- scroll reveals --- */
@@ -117,8 +158,9 @@
     revealEls.forEach(function (el) {
       var i = parseInt(el.getAttribute('data-reveal') || '0', 10);
       el.style.opacity = '0';
-      el.style.transform = 'translateY(28px)';
-      el.style.transition = 'opacity 0.9s ease ' + (i * 0.09) + 's, transform 0.9s cubic-bezier(0.22,1,0.36,1) ' + (i * 0.09) + 's';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.65s ease ' + (Math.min(i, 3) * 0.07) + 's, transform 0.75s cubic-bezier(0.22,1,0.36,1) ' + (Math.min(i, 3) * 0.07) + 's';
+      el.addEventListener('focusin', function () { el.style.opacity = '1'; el.style.transform = 'none'; observer.unobserve(el); });
       observer.observe(el);
     });
   }
@@ -157,22 +199,33 @@
     });
   }
 
-  /* --- mobile menu --- */
+  /* --- keyboard-accessible mobile menu --- */
   var menu = document.querySelector('[data-mobile-menu]');
   var burger = document.querySelector('[data-nav-burger]');
   if (menu && burger) {
-    burger.addEventListener('click', function () { menu.style.display = 'flex'; });
-    menu.querySelectorAll('a, [data-menu-close]').forEach(function (el) {
-      el.addEventListener('click', function () { menu.style.display = 'none'; });
+    var close = function (restoreFocus) {
+      menu.style.display = 'none';
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (restoreFocus) burger.focus();
+    };
+    burger.addEventListener('click', function () {
+      menu.style.display = 'flex';
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      menu.querySelector('[data-menu-close]').focus();
+    });
+    menu.querySelector('[data-menu-close]').addEventListener('click', function () { close(true); });
+    menu.querySelectorAll('a').forEach(function (el) {
+      el.addEventListener('click', function () { close(true); });
+    });
+    menu.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); close(true); }
+      if (e.key !== 'Tab') return;
+      var controls = menu.querySelectorAll('a, button');
+      var first = controls[0], last = controls[controls.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     });
   }
-
-  /* --- subscribe forms (MailerLite wiring replaces this at launch) --- */
-  document.querySelectorAll('[data-subscribe]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var confirm = form.parentElement.querySelector('.subscribe-confirm');
-      if (confirm) confirm.classList.add('on');
-    });
-  });
 })();

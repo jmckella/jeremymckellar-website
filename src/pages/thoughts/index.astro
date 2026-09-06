@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import posts from '../../data/posts.json';
+import FollowUpdates from '../../components/FollowUpdates.astro';
 ---
 <BaseLayout
   title="Thoughts — Jeremy McKellar"
-  description="Quick, actionable reads on AI, creativity, and the future of work — without the hype."
+  description="Explore Jeremy McKellar’s articles on practical AI, creativity, and modern work. Find ideas to try and lessons from building."
 >
 <div style="background:var(--canvas);min-height:100vh;">
 
@@ -12,27 +13,19 @@ import posts from '../../data/posts.json';
     <nav aria-label="Main">
       <a href="/" aria-label="Jeremy McKellar — home" class="wordmark">JM<span>.</span></a>
       <div style="display:flex;align-items:center;gap:28px;">
-        <a href="/#experiments" style="font-size:15px;font-weight:500;">Experiments</a>
-        <a href="mailto:info@jeremymckellar.com" class="btn-gold">Work with me</a>
+        <a href="/#experiments" style="font-size:15px;font-weight:500;">Projects</a>
+        <a href="/#connect" class="btn-gold">Let’s connect</a>
       </div>
     </nav>
   </header>
 
-  <main class="index-main" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(20px,5vw,72px) 80px;position:relative;">
+  <main id="main-content" class="index-main" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,110px) clamp(20px,5vw,72px) 80px;position:relative;">
     <img class="index-art" src="/assets/caricature-ipad.png" alt="Illustrated caricature of Jeremy McKellar reading on a tablet" style="position:absolute;right:clamp(24px,6vw,80px);top:clamp(56px,8vw,96px);width:clamp(190px,17vw,270px);height:auto;filter:drop-shadow(0 24px 48px rgba(0,0,0,0.4));" />
     <p class="eyebrow" style="margin:0 0 24px;">THE BLOG</p>
     <h1 style="margin:0 0 20px;font-family:var(--display);font-weight:600;font-size:clamp(52px,10vw,132px);letter-spacing:-0.03em;line-height:1;">Thoughts</h1>
-    <p style="margin:0 0 40px;font-size:19px;line-height:1.65;color:var(--slate);max-width:560px;">Quick, actionable reads on AI, creativity, and the future of work &mdash; without the hype.</p>
+    <p style="margin:0 0 40px;font-size:19px;line-height:1.65;color:var(--slate);max-width:560px;">Explore ways to use AI, work through a decision, or bring an idea to life. Here’s what I’ve been learning about technology, creativity, and work.</p>
 
-    <div style="max-width:560px;">
-      <form data-subscribe class="subscribe-form" style="margin-bottom:16px;">
-        <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address" style="padding:14px 20px;" />
-        <button type="submit" class="btn-gold lg" style="font-size:16px;padding:14px 28px;">Subscribe</button>
-      </form>
-      <p class="subscribe-confirm" style="margin:0 0 12px;">Thanks &mdash; you&rsquo;re on the list. (Form goes live with MailerLite.)</p>
-    </div>
-    <p class="mono-caption" style="margin:0 0 64px;">Fresh perspectives on tech trends, innovation, and the future of our digital world.</p>
-
+    <div class="reading-guide"><p class="eyebrow">START HERE</p><p>New to the site? Start with <a href="/thoughts/stop-learning-ai-tools-learn-principles/">three principles for using AI</a>, explore <a href="/thoughts/ai-war-room-better-decisions/">a different approach to decisions</a>, or see <a href="/thoughts/i-built-a-document-formatter-in-2-hours-to-stop-wasting-time/">how an everyday frustration became a tool</a>.</p></div>
     <div style="display:flex;flex-direction:column;">
       {posts.map((post) => (
         <a class="post-row" href={`/thoughts/${post.slug}/`}>
@@ -45,6 +38,7 @@ import posts from '../../data/posts.json';
         </a>
       ))}
     </div>
+    <div style="margin-top:64px;"><FollowUpdates /></div>
   </main>
 
   <footer class="site-footer">
