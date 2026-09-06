@@ -1,6 +1,7 @@
 /* Site behaviors ported from the design prototype: kinetic hero word, typed
    status line, particle field, scroll reveals, magnetic buttons, card tilt,
-   mobile menu. All honor prefers-reduced-motion. */
+   mobile menu. Decorative motion honors prefers-reduced-motion; the typed
+   status line stays active across desktop and mobile browsers. */
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -17,7 +18,8 @@
 
   /* --- typed status line --- */
   var typed = document.querySelector('[data-typed]');
-  if (typed && !reduced) {
+  // Keep the signature ticker typing even when the device requests less motion.
+  if (typed) {
     var phrases = [
       'practical AI and everyday workflows',
       'useful tools, built with curiosity',
