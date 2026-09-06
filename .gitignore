@@ -7,3 +7,6 @@ dist/
 prospects.xlsx
 website-scorecard.md
 *.xlsx
+
+# Local Netlify folder
+.netlify
