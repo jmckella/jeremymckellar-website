@@ -1,5 +1,18 @@
 [
   {
+    "slug": "home-rhythm-from-water-leak-to-home-confidence",
+    "date": "SEP 6, 2026",
+    "category": "EXPERIMENTS",
+    "title": "I Built Home Rhythm After a Water Leak Left Us Asking: What Do We Do Now?",
+    "excerpt": "How an unexpected water leak led me to build an app for home maintenance, clearer first steps, and more confident conversations with professionals and insurers.",
+    "homeExcerpt": "An unexpected water leak became the starting point for an app that helps everyday people understand their homes.",
+    "heroImage": "/assets/home-rhythm-welcome-2026.jpg",
+    "heroImageAlt": "Home Rhythm\u2019s live welcome page with its home-care illustration and introduction",
+    "heroCaption": "Home Rhythm today: a practical starting point for understanding and caring for your home.",
+    "heroWidth": 1348,
+    "heroHeight": 926
+  },
+  {
     "slug": "stop-learning-ai-tools-learn-principles",
     "date": "NOV 22, 2025",
     "category": "AI",
@@ -12,7 +25,7 @@
     "date": "OCT 8, 2025",
     "category": "PERSPECTIVE",
     "title": "The Overview Effect: Why Tech Leaders Need a Cosmic Perspective Right Now",
-    "excerpt": "How the Overview Effect helps tech leaders gain perspective during the AI renaissance — zoom out from workplace stress and embrace unity in uncertain times.",
+    "excerpt": "How the Overview Effect helps tech leaders gain perspective during the AI renaissance \u2014 zoom out from workplace stress and embrace unity in uncertain times.",
     "homeExcerpt": "How zooming way out helps tech leaders keep their footing during the AI renaissance."
   },
   {
@@ -28,21 +41,21 @@
     "date": "OCT 3, 2025",
     "category": "EXPERIMENTS",
     "title": "Building PresentlyConnect: A New Way to Stay Connected Without Social Media Pressure",
-    "excerpt": "How I built PresentlyConnect in 2 hours — a pressure-free social app using \"life seasons\" instead of constant updates."
+    "excerpt": "How I built PresentlyConnect in 2 hours \u2014 a pressure-free social app using \"life seasons\" instead of constant updates."
   },
   {
     "slug": "fear-success-compass-pursuing-greatness",
     "date": "OCT 1, 2025",
     "category": "GROWTH",
     "title": "Fear as Your Success Compass: Why Being Scared Means You're Going in the Right Direction",
-    "excerpt": "Why fear and anxiety in pursuit of your goals aren't obstacles to overcome — they're signals that you're headed toward something truly meaningful."
+    "excerpt": "Why fear and anxiety in pursuit of your goals aren't obstacles to overcome \u2014 they're signals that you're headed toward something truly meaningful."
   },
   {
     "slug": "running-into-failure-professional-growth",
     "date": "SEP 29, 2025",
     "category": "GROWTH",
     "title": "Running Into Failure: Why the Hard Days Teach Us the Most",
-    "excerpt": "Challenging days aren't obstacles to success — they're the path itself."
+    "excerpt": "Challenging days aren't obstacles to success \u2014 they're the path itself."
   },
   {
     "slug": "i-built-a-document-formatter-in-2-hours-to-stop-wasting-time",
@@ -87,6 +100,6 @@
     "date": "SEP 10, 2025",
     "category": "LEADERSHIP",
     "title": "The Power of Hyper-Focus: Scaling Your Leadership Direction in Tech",
-    "excerpt": "How hyper-focus becomes the key differentiator for tech leaders — cut through the noise, define your direction, and scale your impact."
+    "excerpt": "How hyper-focus becomes the key differentiator for tech leaders \u2014 cut through the noise, define your direction, and scale your impact."
   }
 ]
