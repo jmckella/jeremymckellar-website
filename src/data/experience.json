@@ -1,0 +1,132 @@
+{
+  "updated": "September 7, 2026",
+  "metrics": [
+    {
+      "value": "90+",
+      "label": "Enterprise customers",
+      "detail": "Technical delivery and escalation management"
+    },
+    {
+      "value": "850K+",
+      "label": "Users migrated",
+      "detail": "Exchange Online, SharePoint & OneDrive"
+    },
+    {
+      "value": "3.5M+",
+      "label": "Migrations enabled",
+      "detail": "Through automation I co-developed"
+    },
+    {
+      "value": "5+",
+      "label": "AI agents launched",
+      "detail": "Business-specific agents supporting 1,000+ employees"
+    }
+  ],
+  "roles": [
+    {
+      "title": "Modern Work Architect (FastTrack)",
+      "period": "May 2022 – Present",
+      "context": "State & Local Government",
+      "summary": "Lead customer engagements from technical readiness and architecture through production go-live across Microsoft 365 and Copilot.",
+      "items": [
+        {
+          "focus": "architecture",
+          "text": "Lead architecture and deployment engagements across messaging, collaboration, identity, security, compliance, endpoint management, and Copilot for public-sector customers."
+        },
+        {
+          "focus": "architecture",
+          "text": "Design phased migration strategies across Google Workspace and Microsoft 365, including workload sequencing, dependencies, and migration waves."
+        },
+        {
+          "focus": "security",
+          "text": "Guide identity controls, Zero Trust principles, Microsoft Defender for Office 365, and Microsoft Purview to support secure deployment and governance."
+        },
+        {
+          "focus": "ai",
+          "text": "Serve as regional lead for internal Microsoft Copilot deployment across the Americas. Led development and launch of 5+ business-specific AI agents using OpenAI technologies, supporting 1,000+ employees."
+        },
+        {
+          "focus": "delivery",
+          "text": "Partner with Sales, Engineering, Product, and customer technical teams to troubleshoot deployment blockers, coordinate escalations, and drive supportable production outcomes."
+        }
+      ]
+    },
+    {
+      "title": "Escalation Engineer (FastTrack)",
+      "period": "December 2020 – May 2022",
+      "context": "Enterprise deployment & technical escalation",
+      "summary": "Led technical delivery, troubleshooting, and escalation management for 90+ enterprise customers.",
+      "items": [
+        {
+          "focus": "delivery",
+          "text": "Led technical delivery and escalation management for 90+ enterprise customers, addressing complex configuration, deployment, and service-readiness issues."
+        },
+        {
+          "focus": "architecture",
+          "text": "Provided technical guidance across Exchange Online, Teams and Teams Phone, Active Directory, Entra ID, Windows, and modern authentication."
+        },
+        {
+          "focus": "security",
+          "text": "Mentored and trained 40+ FastTrack Engineers on modern authentication, Microsoft 365 security practices, structured troubleshooting, and enterprise deployment readiness."
+        },
+        {
+          "focus": "delivery",
+          "text": "Diagnosed cross-workload issues, identified root causes, and coordinated remediation with customer engineering teams and Microsoft technical stakeholders."
+        }
+      ]
+    },
+    {
+      "title": "Escalation Engineer (Migrations)",
+      "period": "February 2018 – December 2020",
+      "context": "Cloud migration & automation",
+      "summary": "Orchestrated migrations for 850,000+ users and co-developed automation used for 3.5M+ migrations globally.",
+      "items": [
+        {
+          "focus": "architecture",
+          "text": "Orchestrated large-scale migrations for 850,000+ users to Exchange Online, SharePoint Online, and OneDrive for Business, addressing workload dependencies and production blockers."
+        },
+        {
+          "focus": "delivery",
+          "text": "Co-developed automation adopted by the Microsoft FastTrack Migration Engine, enabling 3.5M+ user migrations globally and improving repeatability and operational scale."
+        },
+        {
+          "focus": "security",
+          "text": "Resolved complex migration failures and delivered technical training for 15+ engineers on data protection, migration security, troubleshooting, and the Microsoft identity platform."
+        }
+      ]
+    }
+  ],
+  "expertise": [
+    {
+      "title": "AI & Copilot",
+      "skills": "Microsoft 365 Copilot · AI agent delivery · Deployment readiness · Adoption & enablement"
+    },
+    {
+      "title": "Microsoft 365",
+      "skills": "Exchange Online · Teams & Teams Phone · SharePoint Online · OneDrive"
+    },
+    {
+      "title": "Identity & endpoints",
+      "skills": "Entra ID · Active Directory · Modern authentication · Intune · Autopilot"
+    },
+    {
+      "title": "Security & governance",
+      "skills": "Microsoft Defender · Purview · DLP · eDiscovery · Zero Trust"
+    },
+    {
+      "title": "Migration & delivery",
+      "skills": "Enterprise migrations · Google Workspace to M365 · Automation · Technical escalation · Workload readiness"
+    }
+  ],
+  "credentials": [
+    "AB-900: Copilot and Agent Administration Fundamentals",
+    "AB-730: AI Business Professional",
+    "AB-731: AI Transformation Leader",
+    "AI-900: Azure AI Fundamentals",
+    "AZ-900: Azure Fundamentals",
+    "SC-900: Security, Compliance & Identity Fundamentals",
+    "MS-900: Microsoft 365 Fundamentals",
+    "Prosci Certified Change Practitioner",
+    "Microsoft Copilot Achiever Badge"
+  ]
+}

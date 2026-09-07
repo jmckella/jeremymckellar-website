@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import posts from '../data/posts.json';
 import FollowUpdates from '../components/FollowUpdates.astro';
+import CareerProof from '../components/CareerProof.astro';
 
 const latest = posts.slice(0, 3);
 const workbenchPhrases = [
@@ -11,8 +12,8 @@ const workbenchPhrases = [
 ];
 ---
 <BaseLayout
-  title="Jeremy McKellar — Technologist & Storyteller"
-  description="Jeremy McKellar connects technology, people, and ideas through practical AI, Microsoft 365, creative prototypes, and storytelling. Based in Charlotte, NC."
+  title="Jeremy McKellar — Forward-Deployed Architect | Applied AI & Microsoft 365"
+  description="Forward-deployed architect at Microsoft, delivering enterprise Microsoft 365, secure deployments, and applied AI. Explore Jeremy McKellar’s experience and working projects."
 >
 <div id="top" data-scroll-story style="background:var(--canvas);min-height:100vh;overflow-x:clip;position:relative;">
 
@@ -23,7 +24,7 @@ const workbenchPhrases = [
       <div class="nav-links" style="display:flex;align-items:center;gap:36px;font-size:15px;font-weight:500;">
         <a href="#experiments">Selected work</a>
         <a href="#thoughts">Thoughts</a>
-        <a href="#approach">Start here</a>
+        <a href="/experience/">Experience</a>
         <a href="#about">About</a>
       </div>
       <div style="display:flex;align-items:center;gap:16px;">
@@ -42,7 +43,7 @@ const workbenchPhrases = [
     <div style="display:flex;flex-direction:column;gap:8px;margin-top:64px;">
       <a href="#experiments" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Selected work</a>
       <a href="#thoughts" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Thoughts</a>
-      <a href="#approach" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Start here</a>
+      <a href="/experience/" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">Experience</a>
       <a href="#about" style="font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-0.02em;padding:8px 0;">About</a>
     </div>
     <a href="#connect" style="margin-top:auto;display:block;text-align:center;background:#E8B44C;color:#0A0F1E;font-weight:600;font-size:17px;padding:16px 24px;border-radius:999px;">Let’s connect</a>
@@ -55,17 +56,17 @@ const workbenchPhrases = [
     <div class="hero-glow" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 45% at 72% 15%, rgba(59,91,255,0.3), rgba(59,91,255,0) 70%);"></div>
     <img class="hero-art" src="/assets/caricature-hero-white-teeth.png" alt="Illustrated caricature of Jeremy McKellar presenting with a tablet" style="position:absolute;right:clamp(24px,6vw,96px);bottom:0;width:clamp(260px,25vw,430px);filter:drop-shadow(0 30px 60px rgba(0,0,0,0.45));" />
     <div class="hero-content" style="position:relative;max-width:1400px;">
-      <p class="eyebrow" style="margin:0 0 28px;color:var(--slate);">JEREMY McKELLAR — TECHNOLOGIST &amp; STORYTELLER · CHARLOTTE, NC</p>
+      <p class="eyebrow" style="margin:0 0 28px;color:var(--slate);">JEREMY McKELLAR · FORWARD-DEPLOYED ARCHITECT · CHARLOTTE, NC</p>
       <h1 aria-label="Stay curious. Stay connected." style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(42px,10.5vw,160px);line-height:1.08;letter-spacing:-0.03em;">
         Stay <span style="display:inline-block;overflow:hidden;height:1.1em;line-height:1.1;vertical-align:-0.26em;"><span data-roll aria-hidden="true" style="display:flex;flex-direction:column;transform:translateY(0em);transition:transform 0.7s cubic-bezier(0.76,0,0.24,1);"><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">curious</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">building</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">learning</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">connected</em>.</span></span></span><br />
         Stay connected.
       </h1>
-      <p class="hero-intro">I’m Jeremy, a technologist and storyteller exploring how AI and technology can make everyday work better. Find ideas you can use, try the apps I’m building, and get to know the person behind them.</p>
+      <p class="hero-intro">I’m Jeremy, a forward-deployed architect at Microsoft. I help organizations turn complex technology into secure, working solutions—from Microsoft 365 migrations to Copilot and AI agents. Here you’ll find my experience, the products I’m building, and what I’m learning along the way.</p>
       <div class="hero-actions">
         <a data-magnetic href="#experiments" class="btn-gold lg">Explore my work &darr;</a>
-        <a href="#about" class="text-link">Meet Jeremy &rarr;</a>
+        <a href="/experience/" class="text-link">Explore my experience &rarr;</a>
       </div>
-      <p class="hero-context">A decade across solution design, customer success, and technology.</p>
+      <p class="hero-context">8+ years at Microsoft · Modern Work Architect, FastTrack · Enterprise delivery & applied AI</p>
     </div>
   </section>
 
@@ -80,28 +81,29 @@ const workbenchPhrases = [
 
   <section data-chapter="intro" id="approach" class="content-section approach-section">
     <div class="section-intro" data-reveal="0">
-      <p class="eyebrow">01 / START HERE</p>
-      <h2 class="section-title">Ideas to use.<br />Projects to explore.</h2>
-      <p class="section-copy">Looking for practical ways to use AI, curious about what I’m building, or exploring a chance to work together? Find your starting point.</p>
+      <p class="eyebrow">01 / EXPERIENCE IN PRACTICE</p>
+      <h2 class="section-title">From architecture<br />to deployed outcomes.</h2>
+      <p class="section-copy">My work starts with a customer problem and carries through design, readiness, deployment, and the blockers in between. At Microsoft, that has meant enterprise migrations, secure workplace platforms, and AI enablement.</p>
     </div>
+    <CareerProof />
     <div class="approach-grid">
       <div class="approach-item" data-reveal="1">
-        <span class="eyebrow">LEARN</span>
-        <h3>Put AI to work.</h3>
-        <p>Explore my writing on AI, modern work, and creativity—with ideas you can try in your own work.</p>
-        <a class="text-link" href="#thoughts">Explore the articles &rarr;</a>
+        <span class="eyebrow">ARCHITECTURE &amp; DELIVERY</span>
+        <h3>Make complex deployments work.</h3>
+        <p>Connect technical design with customer needs, coordinate dependencies, and resolve issues that stand between readiness and production.</p>
+        <a class="text-link" href="/experience/#career">Explore my career &rarr;</a>
       </div>
       <div class="approach-item" data-reveal="2">
-        <span class="eyebrow">BUILD</span>
-        <h3>See what I’m building.</h3>
-        <p>Explore apps and prototypes I’m developing in public. Try a working demo and follow what I’m learning as each project takes shape.</p>
-        <a class="text-link" href="#experiments">View my projects &rarr;</a>
+        <span class="eyebrow">APPLIED AI</span>
+        <h3>Put AI into everyday work.</h3>
+        <p>Bring Copilot and business-specific agents into employee workflows, supported by the identity, security, and governance they depend on.</p>
+        <a class="text-link" href="/experience/?focus=ai#career">See my AI experience &rarr;</a>
       </div>
       <div class="approach-item" data-reveal="3">
-        <span class="eyebrow">CONNECT</span>
-        <h3>Get to know me.</h3>
-        <p>See how my experience in Microsoft 365, solution design, and customer success shapes my work—and where our interests might connect.</p>
-        <a class="text-link" href="#about">Meet Jeremy &rarr;</a>
+        <span class="eyebrow">PRODUCT BUILDING</span>
+        <h3>Turn a problem into something usable.</h3>
+        <p>Explore the independent apps and prototypes I’m building around real frustrations, from formatting content to keeping up with home maintenance.</p>
+        <a class="text-link" href="#experiments">Try the projects &rarr;</a>
       </div>
     </div>
   </section>
@@ -112,13 +114,14 @@ const workbenchPhrases = [
       <span class="eyebrow">02 / SELECTED WORK</span>
     </div>
     <h2 data-reveal="1" style="margin:0 0 16px;font-family:var(--display);font-weight:600;font-size:clamp(40px,6vw,84px);letter-spacing:-0.025em;line-height:1.02;">Projects I’m building.</h2>
-    <p data-reveal="2" style="margin:0 0 56px;font-size:19px;line-height:1.6;color:var(--slate);max-width:560px;">Explore my apps and works in progress. Try something useful, see how it was built, and follow the projects as they develop.</p>
+    <p data-reveal="2" style="margin:0 0 56px;font-size:19px;line-height:1.6;color:var(--slate);max-width:560px;">Independent builds, separate from my work at Microsoft. Explore the problem behind each project, try the current version, and read the build story.</p>
 
     <div class="bento" style="display:grid;grid-template-columns:repeat(12,1fr);gap:20px;">
       <article data-tilt data-reveal="1" class="card" style="grid-column:span 7;display:flex;flex-direction:column;gap:16px;padding:clamp(28px,3.5vw,48px);min-height:320px;">
         <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#E8B44C;"><span style="color:#5BE87C;">●</span> LIVE / PRODUCTIVITY</p>
         <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(28px,3vw,42px);letter-spacing:-0.02em;line-height:1.05;">Universal Document Formatter</h3>
         <p style="margin:0;font-size:18px;line-height:1.65;color:var(--slate);max-width:520px;">Paste once. Format for LinkedIn, X, email, WhatsApp, or Instagram. Fine-tune the editable preview, then copy or download your text—no account needed.</p>
+        <details class="project-notes"><summary>Problem, approach &amp; current state</summary><dl><dt>Problem</dt><dd>Content needs different formatting across platforms.</dd><dt>Approach</dt><dd>A single input, platform-specific previews, and copy or download controls reduce repeated formatting steps.</dd><dt>Current state</dt><dd>Working app. Try it to inspect the current behavior; the build story covers the original project.</dd></dl></details>
         <figure class="project-preview"><img src="/assets/formatter-preview-2026.jpg" alt="Universal Document Formatter’s refreshed interface showing five platform tabs, sample text, and an editable LinkedIn preview with copy and download controls" width="1348" height="926" style="aspect-ratio:1348/926;" loading="lazy" decoding="async" /><figcaption>Refreshed app · LinkedIn preview with sample content</figcaption></figure>
         <div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:auto;padding-top:16px;font-weight:600;font-size:16px;">
           <a href="https://document-formatter.netlify.app/" target="_blank" rel="noopener" style="color:#93A5FF;">Try it &nearr;</a>
@@ -130,6 +133,7 @@ const workbenchPhrases = [
         <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#E8B44C;"><span style="color:#5BE87C;">●</span> INTERACTIVE DEMO / CONNECTION</p>
         <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(28px,3vw,42px);letter-spacing:-0.02em;line-height:1.05;">PresentlyConnect</h3>
         <p style="margin:0;font-size:18px;line-height:1.65;color:var(--slate);">Explore a different way to keep in touch: share the life season you’re in instead of posting constant updates. Try the demo to see how it works.</p>
+        <details class="project-notes"><summary>Problem, approach &amp; current state</summary><dl><dt>Problem</dt><dd>Keeping in touch can feel like a demand for constant updates.</dd><dt>Approach</dt><dd>Explore connection through life-season cards and a lower-pressure way to share context.</dd><dt>Current state</dt><dd>Interactive prototype using demo data.</dd></dl></details>
         <figure class="project-preview"><img src="/assets/presently-preview.png" alt="PresentlyConnect demo displaying life-season cards" width="1280" height="720" loading="lazy" decoding="async" /><figcaption>Interactive prototype · demo data</figcaption></figure>
         <div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:auto;padding-top:16px;font-weight:600;font-size:16px;">
           <a href="https://presentlyconnect.netlify.app/" target="_blank" rel="noopener" style="color:#93A5FF;">Try it &nearr;</a>
@@ -141,6 +145,7 @@ const workbenchPhrases = [
         <p style="margin:0;font-family:var(--mono);font-size:12px;letter-spacing:0.16em;color:#E8B44C;"><span style="color:#5BE87C;">●</span> LIVE / HOME CARE</p>
         <h3 style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(28px,3vw,42px);letter-spacing:-0.02em;line-height:1.05;">Home Rhythm</h3>
         <p style="margin:0;font-size:18px;line-height:1.65;color:var(--slate);max-width:760px;">Built after an unexpected water leak left us unsure what to do. Get to know your home, follow practical maintenance steps, and prepare better questions for professionals and insurers.</p>
+        <details class="project-notes"><summary>Problem, approach &amp; current state</summary><dl><dt>Problem</dt><dd>Homeowners need a clear place to start with recurring care and unexpected problems.</dd><dt>Approach</dt><dd>Organize maintenance tasks and first-step guidance around a home, with a sample-home view to explore.</dd><dt>Current state</dt><dd>Working app with sample-home data available.</dd></dl></details>
         <figure class="project-preview" style="max-width:860px;"><img src="/assets/home-rhythm-care-2026.jpg" alt="Home Rhythm’s sample home showing maintenance tasks and a clear link to first-step help" width="1363" height="936" style="aspect-ratio:1363/936;" loading="lazy" decoding="async" /><figcaption>Working app · Maintenance view with sample-home data</figcaption></figure>
         <div style="display:flex;flex-wrap:wrap;gap:12px 28px;padding-top:16px;font-weight:600;font-size:16px;">
           <a href="https://home-rhythm-app.netlify.app/#welcome" target="_blank" rel="noopener" style="color:#93A5FF;">Try it &nearr;</a>
@@ -223,8 +228,8 @@ const workbenchPhrases = [
         <span data-reveal="0" class="eyebrow">05 / ABOUT</span>
         <h2 data-reveal="1" style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(40px,5.5vw,76px);letter-spacing:-0.025em;line-height:1.04;">Hi, I’m Jeremy.</h2>
         <div data-reveal="2" style="display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.7;color:var(--prose);max-width:640px;">
-          <p style="margin:0;">I&rsquo;m a technologist, connector, and creative who&rsquo;s spent over a decade helping people and organizations make sense of technology &mdash; from Microsoft 365 to applied AI. I&rsquo;ve worked across architecture, customer success, and solution design &mdash; turning complexity into clarity and building systems that actually work for people.</p>
-          <p style="margin:0;">I’m most interested in what happens after a new tool is introduced: how people understand it, use it, and find value in it. That’s what I explore in my writing, prototypes, and conversations about AI and modern work.</p>
+          <p style="margin:0;">I’m a Modern Work Architect in Microsoft FastTrack, focused on State &amp; Local Government. Since joining Microsoft in 2018, I’ve worked across migrations, technical escalation, and architecture—helping customers move from a complex problem to a secure, supportable deployment.</p>
+          <p style="margin:0;">I’m deepening that work in applied AI: how agents fit into real workflows, how to evaluate their behavior, and how to build systems people can trust. My independent projects give me a place to work through product decisions and share what I learn.</p>
           <p style="margin:0;">Based in Charlotte, NC, I&rsquo;m driven by creativity and connection &mdash; whether I&rsquo;m behind a camera, sketching a new idea, or recording for my podcast. Lifelong learner, occasional philosopher over a glass of wine.</p>
         </div>
         <ul data-reveal="3" style="list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;font-family:var(--mono);font-size:15px;color:#F5F2EA;">
@@ -249,7 +254,7 @@ const workbenchPhrases = [
     <div data-reveal="0">
       <p class="eyebrow">06 / LET’S CONNECT</p>
       <h2 class="section-title">Have a role or<br />an idea in mind?</h2>
-      <p class="section-copy">If my experience fits your team, you’re planning a talk, or you’d like to build something together, tell me what you have in mind.</p>
+      <p class="section-copy">I’m interested in remote AI Solutions Architect, Product/AI Architect, and forward-deployed opportunities where customer problems, technical delivery, and product thinking meet. I’m also open to speaking and thoughtful collaborations.</p>
       <div class="contact-options">
         <a class="btn-gold lg" href="mailto:info@jeremymckellar.com?subject=Career%20opportunity">Talk about a role &nearr;</a>
         <a class="btn-outline" href="mailto:info@jeremymckellar.com?subject=Speaking%20or%20collaboration">Plan a talk or collaboration &nearr;</a>
