@@ -128,5 +128,46 @@
     "MS-900: Microsoft 365 Fundamentals",
     "Prosci Certified Change Practitioner",
     "Microsoft Copilot Achiever Badge"
+  ],
+  "timeline": [
+    {
+      "year": "2018",
+      "period": "February 2018 – December 2020",
+      "title": "Building the foundation.",
+      "role": "Escalation Engineer · Migrations",
+      "summary": "Helping organizations move to the cloud meant understanding what had to work together: their data, identity, security, and the people depending on it.",
+      "work": [
+        "Orchestrated enterprise migrations to Exchange Online, SharePoint Online, and OneDrive.",
+        "Co-developed migration automation and worked through complex failures and deployment blockers.",
+        "Shared technical guidance with engineers on migration security, data protection, and identity."
+      ],
+      "perspective": "A migration is more than moving data. It’s making sure people can keep doing their work."
+    },
+    {
+      "year": "2020",
+      "period": "December 2020 – May 2022",
+      "title": "Connecting the dots.",
+      "role": "Escalation Engineer · FastTrack",
+      "summary": "My work expanded across Microsoft 365—helping customers and engineering teams work through the issues between a technical plan and a successful deployment.",
+      "work": [
+        "Guided enterprise customers through configuration, readiness, and technical escalations.",
+        "Diagnosed issues spanning collaboration, identity, authentication, and security.",
+        "Mentored FastTrack engineers and coordinated remediation with customer and Microsoft teams."
+      ],
+      "perspective": "The most useful technical answer connects the system, the context, and the people working through the problem."
+    },
+    {
+      "year": "2022 — NOW",
+      "period": "May 2022 – Present",
+      "title": "From systems to everyday impact.",
+      "role": "Modern Work Architect · FastTrack",
+      "summary": "Today, I help State & Local Government customers navigate Microsoft 365 architecture, deployment, and AI-enabled work—connecting technical decisions with the way people actually work.",
+      "work": [
+        "Guide architecture and deployment across collaboration, identity, security, compliance, endpoints, and Copilot.",
+        "Support internal Copilot deployment across the Americas and the delivery of business-specific AI agents.",
+        "Partner with customer teams, Sales, Engineering, and Product to resolve blockers and support production outcomes."
+      ],
+      "perspective": "The questions that interest me most now: how does AI fit into a real workflow, and what makes it useful and trustworthy?"
+    }
   ]
 }

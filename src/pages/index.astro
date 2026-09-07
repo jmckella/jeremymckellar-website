@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import posts from '../data/posts.json';
 import FollowUpdates from '../components/FollowUpdates.astro';
-import CareerProof from '../components/CareerProof.astro';
 
 const latest = posts.slice(0, 3);
 const workbenchPhrases = [
@@ -12,8 +11,8 @@ const workbenchPhrases = [
 ];
 ---
 <BaseLayout
-  title="Jeremy McKellar — Forward-Deployed Architect | Applied AI & Microsoft 365"
-  description="Forward-deployed architect at Microsoft, delivering enterprise Microsoft 365, secure deployments, and applied AI. Explore Jeremy McKellar’s experience and working projects."
+  title="Jeremy McKellar — Technologist, Architect & Storyteller"
+  description="Ideas, projects, and conversations from Jeremy McKellar—a technologist, enterprise architect, and storyteller exploring AI, modern work, and human connection."
 >
 <div id="top" data-scroll-story style="background:var(--canvas);min-height:100vh;overflow-x:clip;position:relative;">
 
@@ -56,17 +55,17 @@ const workbenchPhrases = [
     <div class="hero-glow" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 45% at 72% 15%, rgba(59,91,255,0.3), rgba(59,91,255,0) 70%);"></div>
     <img class="hero-art" src="/assets/caricature-hero-white-teeth.png" alt="Illustrated caricature of Jeremy McKellar presenting with a tablet" style="position:absolute;right:clamp(24px,6vw,96px);bottom:0;width:clamp(260px,25vw,430px);filter:drop-shadow(0 30px 60px rgba(0,0,0,0.45));" />
     <div class="hero-content" style="position:relative;max-width:1400px;">
-      <p class="eyebrow" style="margin:0 0 28px;color:var(--slate);">JEREMY McKELLAR · FORWARD-DEPLOYED ARCHITECT · CHARLOTTE, NC</p>
+      <p class="eyebrow" style="margin:0 0 28px;color:var(--slate);">JEREMY McKELLAR — TECHNOLOGIST &amp; STORYTELLER · CHARLOTTE, NC</p>
       <h1 aria-label="Stay curious. Stay connected." style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(42px,10.5vw,160px);line-height:1.08;letter-spacing:-0.03em;">
         Stay <span style="display:inline-block;overflow:hidden;height:1.1em;line-height:1.1;vertical-align:-0.26em;"><span data-roll aria-hidden="true" style="display:flex;flex-direction:column;transform:translateY(0em);transition:transform 0.7s cubic-bezier(0.76,0,0.24,1);"><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">curious</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">building</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">learning</em>.</span><span style="display:block;height:1.1em;"><em style="color:#E8B44C;">connected</em>.</span></span></span><br />
         Stay connected.
       </h1>
-      <p class="hero-intro">I’m Jeremy, a forward-deployed architect at Microsoft. I help organizations turn complex technology into secure, working solutions—from Microsoft 365 migrations to Copilot and AI agents. Here you’ll find my experience, the products I’m building, and what I’m learning along the way.</p>
+      <p class="hero-intro">I’m Jeremy, a technologist, architect, and storyteller exploring how AI and technology can make everyday work better. Find ideas you can use, try the apps I’m building, and join the conversations along the way.</p>
       <div class="hero-actions">
         <a data-magnetic href="#experiments" class="btn-gold lg">Explore my work &darr;</a>
-        <a href="/experience/" class="text-link">Explore my experience &rarr;</a>
+        <a href="#about" class="text-link">Meet Jeremy &rarr;</a>
       </div>
-      <p class="hero-context">8+ years at Microsoft · Modern Work Architect, FastTrack · Enterprise delivery & applied AI</p>
+      <p class="hero-context">Grounded in enterprise architecture. Driven by curiosity, creativity, and connection.</p>
     </div>
   </section>
 
@@ -81,29 +80,28 @@ const workbenchPhrases = [
 
   <section data-chapter="intro" id="approach" class="content-section approach-section">
     <div class="section-intro" data-reveal="0">
-      <p class="eyebrow">01 / EXPERIENCE IN PRACTICE</p>
-      <h2 class="section-title">From architecture<br />to deployed outcomes.</h2>
-      <p class="section-copy">My work starts with a customer problem and carries through design, readiness, deployment, and the blockers in between. At Microsoft, that has meant enterprise migrations, secure workplace platforms, and AI enablement.</p>
+      <p class="eyebrow">01 / START HERE</p>
+      <h2 class="section-title">Ideas to use.<br />Projects to explore.</h2>
+      <p class="section-copy">Looking for practical ways to use AI, curious about what I’m building, or exploring a chance to work together? Find your starting point.</p>
     </div>
-    <CareerProof />
     <div class="approach-grid">
       <div class="approach-item" data-reveal="1">
-        <span class="eyebrow">ARCHITECTURE &amp; DELIVERY</span>
-        <h3>Make complex deployments work.</h3>
-        <p>Connect technical design with customer needs, coordinate dependencies, and resolve issues that stand between readiness and production.</p>
-        <a class="text-link" href="/experience/#career">Explore my career &rarr;</a>
+        <span class="eyebrow">LEARN</span>
+        <h3>Put AI to work.</h3>
+        <p>Explore my writing on AI, modern work, and creativity—with ideas you can try in your own work.</p>
+        <a class="text-link" href="#thoughts">Explore the articles &rarr;</a>
       </div>
       <div class="approach-item" data-reveal="2">
-        <span class="eyebrow">APPLIED AI</span>
-        <h3>Put AI into everyday work.</h3>
-        <p>Bring Copilot and business-specific agents into employee workflows, supported by the identity, security, and governance they depend on.</p>
-        <a class="text-link" href="/experience/?focus=ai#career">See my AI experience &rarr;</a>
+        <span class="eyebrow">BUILD</span>
+        <h3>See what I’m building.</h3>
+        <p>Explore apps and prototypes I’m developing in public. Try a working demo and follow what I’m learning as each project takes shape.</p>
+        <a class="text-link" href="#experiments">View my projects &rarr;</a>
       </div>
       <div class="approach-item" data-reveal="3">
-        <span class="eyebrow">PRODUCT BUILDING</span>
-        <h3>Turn a problem into something usable.</h3>
-        <p>Explore the independent apps and prototypes I’m building around real frustrations, from formatting content to keeping up with home maintenance.</p>
-        <a class="text-link" href="#experiments">Try the projects &rarr;</a>
+        <span class="eyebrow">CONNECT</span>
+        <h3>Get to know me.</h3>
+        <p>Explore the architecture, customer work, and experiences that shape my perspective on technology—and where our interests might connect.</p>
+        <a class="text-link" href="/experience/">Explore my background &rarr;</a>
       </div>
     </div>
   </section>
@@ -114,7 +112,7 @@ const workbenchPhrases = [
       <span class="eyebrow">02 / SELECTED WORK</span>
     </div>
     <h2 data-reveal="1" style="margin:0 0 16px;font-family:var(--display);font-weight:600;font-size:clamp(40px,6vw,84px);letter-spacing:-0.025em;line-height:1.02;">Projects I’m building.</h2>
-    <p data-reveal="2" style="margin:0 0 56px;font-size:19px;line-height:1.6;color:var(--slate);max-width:560px;">Independent builds, separate from my work at Microsoft. Explore the problem behind each project, try the current version, and read the build story.</p>
+    <p data-reveal="2" style="margin:0 0 56px;font-size:19px;line-height:1.6;color:var(--slate);max-width:560px;">Explore my independent apps and works in progress. Try something useful, read the story behind it, and follow what I’m learning as each project takes shape.</p>
 
     <div class="bento" style="display:grid;grid-template-columns:repeat(12,1fr);gap:20px;">
       <article data-tilt data-reveal="1" class="card" style="grid-column:span 7;display:flex;flex-direction:column;gap:16px;padding:clamp(28px,3.5vw,48px);min-height:320px;">
@@ -228,8 +226,8 @@ const workbenchPhrases = [
         <span data-reveal="0" class="eyebrow">05 / ABOUT</span>
         <h2 data-reveal="1" style="margin:0;font-family:var(--display);font-weight:600;font-size:clamp(40px,5.5vw,76px);letter-spacing:-0.025em;line-height:1.04;">Hi, I’m Jeremy.</h2>
         <div data-reveal="2" style="display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.7;color:var(--prose);max-width:640px;">
-          <p style="margin:0;">I’m a Modern Work Architect in Microsoft FastTrack, focused on State &amp; Local Government. Since joining Microsoft in 2018, I’ve worked across migrations, technical escalation, and architecture—helping customers move from a complex problem to a secure, supportable deployment.</p>
-          <p style="margin:0;">I’m deepening that work in applied AI: how agents fit into real workflows, how to evaluate their behavior, and how to build systems people can trust. My independent projects give me a place to work through product decisions and share what I learn.</p>
+          <p style="margin:0;">I’m a technologist, connector, and creative. My work as a Modern Work Architect at Microsoft gives me a close-up view of how organizations navigate change—from enterprise platforms to AI. I bring that perspective to the things I build, write, and talk about here.</p>
+          <p style="margin:0;">I’m most interested in what happens when technology meets people: how we understand it, make it useful, and create something meaningful with it. That’s the thread through my projects, conversations, and talks about AI and modern work.</p>
           <p style="margin:0;">Based in Charlotte, NC, I&rsquo;m driven by creativity and connection &mdash; whether I&rsquo;m behind a camera, sketching a new idea, or recording for my podcast. Lifelong learner, occasional philosopher over a glass of wine.</p>
         </div>
         <ul data-reveal="3" style="list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;font-family:var(--mono);font-size:15px;color:#F5F2EA;">
@@ -241,6 +239,7 @@ const workbenchPhrases = [
         <div data-reveal="4" style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:12px;">
           <a data-magnetic href="#connect" class="btn-gold lg">Let’s connect</a>
           <a data-magnetic href="https://www.linkedin.com/in/jeremy-mckellar/" target="_blank" rel="noopener" class="btn-outline" style="padding:15px 30px;">Connect on LinkedIn &nearr;</a>
+          <a href="/experience/" class="text-link">More about my experience &rarr;</a>
           <a href="https://ingoodconnects.com" target="_blank" rel="noopener" style="font-weight:600;font-size:16px;color:#93A5FF;">In Good Company &nearr;</a>
         </div>
       </div>
@@ -253,11 +252,11 @@ const workbenchPhrases = [
   <section data-chapter="connect" id="connect" class="content-section connect-section">
     <div data-reveal="0">
       <p class="eyebrow">06 / LET’S CONNECT</p>
-      <h2 class="section-title">Have a role or<br />an idea in mind?</h2>
-      <p class="section-copy">I’m interested in remote AI Solutions Architect, Product/AI Architect, and forward-deployed opportunities where customer problems, technical delivery, and product thinking meet. I’m also open to speaking and thoughtful collaborations.</p>
+      <h2 class="section-title">Have an idea?<br />Let’s talk.</h2>
+      <p class="section-copy">Planning a conversation about AI or modern work? Looking for a speaker, a creative collaborator, or someone to exchange ideas with? Tell me what you’re thinking.</p>
       <div class="contact-options">
-        <a class="btn-gold lg" href="mailto:info@jeremymckellar.com?subject=Career%20opportunity">Talk about a role &nearr;</a>
-        <a class="btn-outline" href="mailto:info@jeremymckellar.com?subject=Speaking%20or%20collaboration">Plan a talk or collaboration &nearr;</a>
+        <a class="btn-gold lg" href="mailto:info@jeremymckellar.com?subject=Let%E2%80%99s%20connect">Let’s connect &nearr;</a>
+        <a class="btn-outline" href="mailto:info@jeremymckellar.com?subject=Speaking%20or%20collaboration">Speaking &amp; collaboration &nearr;</a>
       </div>
       <a class="text-link email-link" href="mailto:info@jeremymckellar.com">info@jeremymckellar.com</a>
     </div>
